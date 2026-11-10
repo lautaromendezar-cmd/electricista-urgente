@@ -10,7 +10,7 @@ Landing de electricista de urgencia en **Mar del Plata** para Dario.
 
 ## Estado al 10/11/2026 (oficina)
 
-- Web publicada en Vercel: proyecto `electricista-urgente`, `electricista-urgente.vercel.app`, Git conectado. El primer deploy salió por CLI porque el push no lo disparó: **verificar que los pushes deployen solos**.
+- Web publicada en Vercel: proyecto `electricista-urgente`, `electricista-urgente.vercel.app`, Git conectado. El push a `main` deploya solo (verificado 10/11).
 - Dominio agregado al proyecto (apex + www) y **delegado en nic.ar** a `ns1/ns2.vercel-dns.com` (RDAP lo muestra desde las 13:45). Al cierre todavía no estaba publicado en la zona .com.ar: verificar que `https://electricistaurgente.com.ar` y el www respondan con la web y HTTPS.
 - **Cuenta de Google Ads creada: «Electricista Urgente», ID `586-442-4444`.** Todavía no tiene campañas ni conversiones.
 
