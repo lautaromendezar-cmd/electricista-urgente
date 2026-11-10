@@ -2,3 +2,6 @@ fuente-img/
 .vercel
 .env*
 node_modules/
+
+.vercel
+.env*
