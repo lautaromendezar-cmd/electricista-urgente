@@ -8,6 +8,21 @@ Landing de electricista de urgencia en **Mar del Plata** para Dario.
 - Stack: HTML estático, CSS inline en `index.html`, sin build ni `package.json`. Fuente Hanken Grotesk local (`/fuentes`).
 - Fotos generadas con Google Nano Banana 2.1 (10/11). Los PNG originales están en `fuente-img/` (en .gitignore, solo en la PC de la oficina). Las versiones WebP están en `img/`.
 
+## Estado al 10/11/2026 (oficina)
+
+- Web publicada en Vercel: proyecto `electricista-urgente`, `electricista-urgente.vercel.app`, Git conectado. El primer deploy salió por CLI porque el push no lo disparó: **verificar que los pushes deployen solos**.
+- Dominio agregado al proyecto (apex + www) y **delegado en nic.ar** a `ns1/ns2.vercel-dns.com` (RDAP lo muestra desde las 13:45). Al cierre todavía no estaba publicado en la zona .com.ar: verificar que `https://electricistaurgente.com.ar` y el www respondan con la web y HTTPS.
+- **Cuenta de Google Ads creada: «Electricista Urgente», ID `586-442-4444`.** Todavía no tiene campañas ni conversiones.
+
+## Próxima sesión (desde casa)
+
+1. Repasar todo el sitio con Lautaro.
+2. Teléfono nuevo de Dario → reemplazarlo y sacar el `noindex` (puntos 1 y 2 de abajo).
+3. Google Ads 586-442-4444:
+   - crear las conversiones «Clic WhatsApp web» y «Clic llamar web» y pegar `CUENTA_ADS` (AW-…) y las etiquetas en `js/medicion.js`;
+   - armar y vincular las campañas (Mar del Plata y alrededores).
+4. Mecanismo antispam como La Perla (punto 4).
+
 ## Pendiente para salir en vivo
 
 1. **Teléfono real.** Hoy figura `5492230000000` / `223 000-0000` como placeholder. Cuando Dario lo pase, reemplazar en todo el sitio:
@@ -16,9 +31,9 @@ Landing de electricista de urgencia en **Mar del Plata** para Dario.
    ```
    (el número también aparece en el schema `telephone`, que lo cubre el primer reemplazo.)
 2. **Sacar el `noindex`** de `index.html` (está marcado con un TODO) apenas esté el teléfono real.
-3. **DNS:** en nic.ar delegar el dominio a `ns1.vercel-dns.com` y `ns2.vercel-dns.com`. El dominio ya está agregado en el proyecto de Vercel.
+3. ~~DNS: delegar en nic.ar a Vercel~~ → hecho el 10/11; falta confirmar que propagó.
 4. **Mecanismo antispam como el de La Perla:** el contexto está en la PC de casa. En el código publicado de laperladestapaciones / laperlacerrajeria no se ve: allá solo hay un 403 a `.php` (firewall de Vercel, `X-Vercel-Mitigated: deny`) y `Disallow: /api/` en robots. Agregarlo desde casa.
-5. **Google Ads:** cuenta NUEVA, con mail propio, fuera del administrador de las otras. Después completar `CUENTA_ADS` y `ETIQUETAS` en `js/medicion.js`. Mientras esté vacío, no se carga nada de Google.
+5. **Google Ads:** cuenta `586-442-4444` ya creada (10/11). Falta completar `CUENTA_ADS` y `ETIQUETAS` en `js/medicion.js`. Mientras esté vacío, no se carga nada de Google.
 6. **Vercel Analytics:** activarlo en el panel del proyecto (el script `/_vercel/insights/script.js` ya está puesto).
 7. Search Console + sitemap, cuando el sitio esté indexable.
 
