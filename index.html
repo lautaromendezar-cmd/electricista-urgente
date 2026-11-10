@@ -72,13 +72,13 @@
       --noche-3: #151e31;
       --hueso: #efe9df;
       --tenue: rgba(239, 233, 223, .64);
-      --apagado: rgba(239, 233, 223, .42);
+      --apagado: rgba(239, 233, 223, .58);
       --linea: rgba(239, 233, 223, .12);
       --sodio: #ffb547;
       --sodio-claro: #ffc874;
       --sodio-tinte: rgba(255, 181, 71, .09);
-      --wa: #1faf5a;
-      --wa-hover: #189a4e;
+      --wa: #25d366;
+      --wa-hover: #4be083;
       --peligro: #ff6a4d;
       --ancho: 1320px;
       --margen: clamp(20px, 4vw, 56px);
@@ -135,7 +135,7 @@
     .boton:active { transform: scale(.97); }
     .boton--luz { background: var(--sodio); color: var(--noche); box-shadow: 0 0 0 0 rgba(255, 181, 71, 0); }
     .boton--luz:hover { background: var(--sodio-claro); box-shadow: 0 10px 50px -8px rgba(255, 181, 71, .55); }
-    .boton--wa { background: var(--wa); color: #fff; }
+    .boton--wa { background: var(--wa); color: var(--noche); }
     .boton--wa:hover { background: var(--wa-hover); }
     .boton--fantasma { background: rgba(239, 233, 223, .06); color: var(--hueso); box-shadow: inset 0 0 0 1px var(--linea); }
     .boton--fantasma:hover { background: rgba(239, 233, 223, .12); }
@@ -742,7 +742,5 @@
       }
     })();
   </script>
-  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
-  <script src="/_vercel/insights/script.js" defer></script>
 </body>
 </html>

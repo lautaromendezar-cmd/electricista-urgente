@@ -23,14 +23,19 @@ Landing de electricista de urgencia en **Mar del Plata** para Dario.
 
 - Accesible con las credenciales del MCP (`~/.google-ads-mcp/`), facturación aprobada, ARS, autoetiquetado activo.
 - Conversiones creadas por API el 10/11 (`herramientas/ads_conversiones.py`): «Clic WhatsApp web» y «Clic llamar web», tag `AW-18567711962`, ya cargadas en `js/medicion.js`. gtag.js se carga con la primera interacción o a los 3,5 s.
-- Campañas: ver abajo.
+- **Campaña «Electricista MdP - Búsqueda» (id 24459234427), creada por API el 10/11 EN PAUSA** (`herramientas/ads_campana.py`, idempotente: si existe no hace nada).
+  - Búsqueda de Google solamente (sin partners ni display). Maximizar clics con tope CPC $3.000. Presupuesto **$8.000/día propuesto, a confirmar** (lo paga Dario).
+  - Ubicación por presencia: General Pueyrredón (MdP, Batán, Sierra) + Santa Clara del Mar. Español.
+  - 2 grupos: «Electricista urgente» y «Sin luz y térmica», 12 claves c/u en frase + exacta. 35 negativas (edea, reclamo, programados, curso, trabajo, auto…). **No poner «sin luz» / «corte de luz» como negativas amplias** (en Manos Expertas bloqueaban clientes).
+  - RSA de 15 títulos y 4 descripciones por grupo. Sin «matriculado» (falta confirmar). Llamada `+5492235013375`, 4 sitelinks a las anclas, 5 destacados y fragmento de Servicios.
+  - **Para activarla:** confirmar presupuesto → Ads → campaña → Habilitar. Revisar a los 2-3 días los términos de búsqueda.
+- Cuando arranque: medir CPA; si conviene, pasar a Maximizar conversiones con ~15-20 conversiones acumuladas.
 
 ## Pendiente
 
 1. **Antispam como La Perla:** registro de gclid/IP en Neon + vigilancia (`api/vigilar.js` de laperladestapaciones, en la PC de casa). Implica sumar `package.json` y una base Neon propia (no la de La Perla). Hacerlo si aparecen clics no válidos.
 2. **Search Console** + sitemap (el `noindex` ya se sacó el 10/11).
-3. **Vercel Analytics:** activarlo en el panel del proyecto (el script ya está).
-4. `og.jpg` sigue siendo la del diseño anterior.
+3. **Vercel Analytics:** activarlo en el panel del proyecto y recién ahí volver a poner el script `/_vercel/insights/script.js` (se sacó el 10/11 porque daba 404).
 
 ## Textos a confirmar con Dario
 
