@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Electricista Urgente en Mar del Plata · 24 hs | Electricista Urgente</title>
+  <meta name="description" content="Electricista urgente en Mar del Plata. Cortes de luz, térmica o disyuntor que salta, olor a quemado, tableros y pilares. Escribinos por WhatsApp y te respondemos al toque.">
+  <!-- TODO: sacar este noindex cuando esté el teléfono real (ver CONTINUAR.md) -->
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://electricistaurgente.com.ar/">
+  <meta name="theme-color" content="#0f1115">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="Electricista urgente en Mar del Plata">
+  <meta property="og:description" content="Cortes de luz, térmica que salta, olor a quemado. Escribinos por WhatsApp y vamos.">
+  <meta property="og:url" content="https://electricistaurgente.com.ar/">
+  <meta property="og:image" content="https://electricistaurgente.com.ar/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="/fuentes/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="/img/hero-movil-800.webp" media="(max-width: 760px)">
+  <link rel="preload" as="image" href="/img/hero-1920.webp" media="(min-width: 761px)">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Electrician",
+    "name": "Electricista Urgente",
+    "url": "https://electricistaurgente.com.ar/",
+    "image": "https://electricistaurgente.com.ar/og.jpg",
+    "telephone": "+5492230000000",
+    "priceRange": "$$",
+    "address": { "@type": "PostalAddress", "addressLocality": "Mar del Plata", "addressRegion": "Buenos Aires", "addressCountry": "AR" },
+    "areaServed": [
+      { "@type": "City", "name": "Mar del Plata" },
+      { "@type": "City", "name": "Batán" },
+      { "@type": "City", "name": "Sierra de los Padres" },
+      { "@type": "City", "name": "Santa Clara del Mar" }
+    ],
+    "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "¿Atienden de noche, fines de semana y feriados?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Las urgencias eléctricas no esperan al lunes: atendemos las 24 horas, todos los días, en Mar del Plata y alrededores." } },
+      { "@type": "Question", "name": "¿Cuánto cuesta la visita?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de la zona y del horario. Te lo decimos por WhatsApp antes de salir, y una vez en tu casa te pasamos el precio del trabajo antes de empezar. Sin sorpresas." } },
+      { "@type": "Question", "name": "Salta la térmica o el disyuntor y no levanta, ¿qué hago?", "acceptedAnswer": { "@type": "Answer", "text": "Desenchufá todo y probá subirlo de nuevo. Si vuelve a saltar, hay una falla o una fuga a tierra: no lo fuerces ni lo puentees. Dejalo bajo y escribinos." } },
+      { "@type": "Question", "name": "Hay olor a quemado o un enchufe se puso negro, ¿es urgente?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Bajá la térmica general, no toques el enchufe ni lo uses, y llamanos. Es una de las causas más comunes de incendio en casas." } },
+      { "@type": "Question", "name": "¿Cómo se paga?", "acceptedAnswer": { "@type": "Answer", "text": "Efectivo, transferencia o Mercado Pago." } }
+    ]
+  }
+  </script>
+
+  <style>
+    @font-face {
+      font-family: "Hanken Grotesk";
+      src: url("/fuentes/hanken-grotesk-latin.woff2") format("woff2");
+      font-weight: 400 700;
+      font-display: swap;
+    }
+
+    :root {
+      --tinta: #0f1115;
+      --tinta-2: #2a2e36;
+      --gris: #5c626d;
+      --linea: #e4e4e7;
+      --fondo: #ffffff;
+      --fondo-2: #f4f4f5;
+      --azul: #2448ff;
+      --azul-hover: #1636d6;
+      --verde: #18a957;
+      --verde-hover: #12924a;
+      --alerta: #e5484d;
+      --radio: 14px;
+      --ancho: 1180px;
+      --cabecera: 68px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    [id] { scroll-margin-top: calc(var(--cabecera) + 16px); }
+    body {
+      margin: 0;
+      font-family: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--tinta);
+      background: var(--fondo);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; }
+    h1, h2, h3 { margin: 0; font-weight: 600; letter-spacing: -0.02em; line-height: 1.12; }
+    h2 { font-size: clamp(28px, 3.4vw, 40px); }
+    h3 { font-size: 19px; letter-spacing: -0.01em; }
+    p { margin: 0; }
+    .envoltura { width: 100%; max-width: var(--ancho); margin: 0 auto; padding: 0 20px; }
+    .seccion { padding: clamp(64px, 8vw, 104px) 0; }
+    .seccion--gris { background: var(--fondo-2); }
+    .antetitulo {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--azul); margin-bottom: 14px;
+    }
+    .bajada { color: var(--gris); font-size: 18px; max-width: 620px; margin-top: 14px; }
+    .icono { width: 20px; height: 20px; flex: none; }
+
+    /* Botones */
+    .boton {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 54px; padding: 0 24px; border-radius: 999px;
+      font: inherit; font-weight: 600; font-size: 17px; text-decoration: none; white-space: nowrap;
+      transition: background-color .18s ease, transform .18s ease, border-color .18s ease;
+    }
+    .boton:active { transform: scale(.98); }
+    .boton--wa { background: var(--verde); color: #fff; }
+    .boton--wa:hover { background: var(--verde-hover); }
+    .boton--tel { background: #fff; color: var(--tinta); }
+    .boton--tel:hover { background: #e9ebf0; }
+    .boton--azul { background: var(--azul); color: #fff; }
+    .boton--azul:hover { background: var(--azul-hover); }
+    .boton--borde { border: 1.5px solid var(--linea); color: var(--tinta); background: #fff; }
+    .boton--borde:hover { border-color: var(--tinta); }
+    :focus-visible { outline: 3px solid var(--azul); outline-offset: 3px; }
+
+    /* Cabecera */
+    .cabecera {
+      position: fixed; inset: 0 0 auto 0; z-index: 50; height: var(--cabecera);
+      display: flex; align-items: center; color: #fff;
+      transition: background-color .25s ease, color .25s ease, box-shadow .25s ease;
+    }
+    .cabecera--solida { background: rgba(255,255,255,.96); color: var(--tinta); box-shadow: 0 1px 0 var(--linea); backdrop-filter: blur(10px); }
+    .cabecera .envoltura { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .marca { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 600; font-size: 18px; letter-spacing: -0.02em; }
+    .marca__simbolo { width: 34px; height: 34px; border-radius: 9px; background: var(--azul); display: grid; place-items: center; flex: none; }
+    .marca__simbolo svg { width: 18px; height: 18px; }
+    .marca small { display: block; font-size: 12px; font-weight: 500; letter-spacing: 0; opacity: .7; margin-top: 1px; }
+    .nav { display: flex; align-items: center; gap: 28px; font-size: 15px; font-weight: 500; }
+    .nav a { text-decoration: none; opacity: .85; }
+    .nav a:hover { opacity: 1; }
+    .cabecera__tel {
+      display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 0 18px;
+      border-radius: 999px; background: var(--azul); color: #fff; text-decoration: none; font-weight: 600; font-size: 15px;
+    }
+    .cabecera__tel:hover { background: var(--azul-hover); }
+    .cabecera__tel .icono { width: 17px; height: 17px; }
+
+    /* Hero */
+    .hero { position: relative; min-height: min(100svh, 860px); display: flex; align-items: flex-end; color: #fff; background: #0b0c0f; overflow: hidden; }
+    .hero__foto { position: absolute; inset: 0; }
+    .hero__foto img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; }
+    .hero__foto::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(90deg, rgba(8,9,12,.88) 0%, rgba(8,9,12,.62) 42%, rgba(8,9,12,.15) 75%),
+                  linear-gradient(0deg, rgba(8,9,12,.7) 0%, rgba(8,9,12,0) 45%);
+    }
+    .hero .envoltura { position: relative; padding-top: calc(var(--cabecera) + 48px); padding-bottom: 56px; }
+    .hero__estado {
+      display: inline-flex; align-items: center; gap: 10px; padding: 7px 14px 7px 12px; border-radius: 999px;
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.16); font-size: 14px; font-weight: 500;
+      backdrop-filter: blur(6px); margin-bottom: 22px;
+    }
+    .punto { width: 8px; height: 8px; border-radius: 50%; background: #3ddc84; box-shadow: 0 0 0 0 rgba(61,220,132,.6); animation: latido 2s infinite; }
+    @keyframes latido { 0% { box-shadow: 0 0 0 0 rgba(61,220,132,.55); } 70% { box-shadow: 0 0 0 9px rgba(61,220,132,0); } 100% { box-shadow: 0 0 0 0 rgba(61,220,132,0); } }
+    .hero h1 { font-size: clamp(38px, 5.2vw, 64px); max-width: 720px; }
+    .hero__bajada { font-size: clamp(17px, 1.6vw, 20px); color: rgba(255,255,255,.82); max-width: 560px; margin-top: 18px; }
+    .hero__acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .hero__garantias { display: flex; flex-wrap: wrap; gap: 10px 26px; margin: 34px 0 0; padding: 22px 0 0; list-style: none; border-top: 1px solid rgba(255,255,255,.16); font-size: 15px; color: rgba(255,255,255,.86); max-width: 760px; }
+    .hero__garantias li { display: flex; align-items: center; gap: 8px; }
+    .hero__garantias svg { width: 17px; height: 17px; color: #3ddc84; }
+
+    /* Problemas */
+    .problemas { display: grid; grid-template-columns: 1fr 380px; gap: 48px; align-items: start; margin-top: 40px; }
+    .lista-problemas { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--linea); }
+    .lista-problemas a {
+      display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: 18px;
+      padding: 20px 6px; border-bottom: 1px solid var(--linea); text-decoration: none;
+      transition: background-color .18s ease, padding .18s ease;
+    }
+    .lista-problemas a:hover { background: var(--fondo-2); padding-left: 14px; padding-right: 14px; }
+    .lista-problemas__icono { width: 44px; height: 44px; border-radius: 12px; background: #eef1ff; color: var(--azul); display: grid; place-items: center; }
+    .lista-problemas__icono svg { width: 22px; height: 22px; }
+    .lista-problemas h3 { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .lista-problemas p { color: var(--gris); font-size: 15px; margin-top: 3px; }
+    .etiqueta { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding: 3px 8px; border-radius: 6px; background: #fdecec; color: #c4262c; }
+    .lista-problemas__ir { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--verde); white-space: nowrap; }
+    .lista-problemas__ir svg { width: 18px; height: 18px; }
+
+    .aviso { position: sticky; top: calc(var(--cabecera) + 24px); border-radius: var(--radio); overflow: hidden; background: var(--tinta); color: #fff; }
+    .aviso img { aspect-ratio: 4 / 3.4; object-fit: cover; width: 100%; }
+    .aviso__texto { padding: 22px 24px 26px; }
+    .aviso__texto h3 { display: flex; align-items: center; gap: 10px; font-size: 18px; }
+    .aviso__texto h3 svg { width: 20px; height: 20px; color: #ff6b6f; }
+    .aviso ol { margin: 14px 0 20px; padding-left: 20px; color: rgba(255,255,255,.8); font-size: 15px; }
+    .aviso li + li { margin-top: 6px; }
+    .aviso .boton { width: 100%; }
+
+    /* Cómo trabajamos */
+    .proceso { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+    .proceso__foto { border-radius: var(--radio); overflow: hidden; aspect-ratio: 4 / 4.4; }
+    .proceso__foto img { width: 100%; height: 100%; object-fit: cover; }
+    .pasos { list-style: none; margin: 32px 0 0; padding: 0; counter-reset: paso; }
+    .pasos li { position: relative; padding: 0 0 26px 58px; counter-increment: paso; }
+    .pasos li::before {
+      content: counter(paso); position: absolute; left: 0; top: -2px; width: 38px; height: 38px; border-radius: 50%;
+      display: grid; place-items: center; font-weight: 600; font-size: 15px; background: var(--tinta); color: #fff;
+    }
+    .pasos li:not(:last-child)::after { content: ""; position: absolute; left: 18.5px; top: 42px; bottom: 6px; width: 1px; background: var(--linea); }
+    .pasos p { color: var(--gris); margin-top: 4px; font-size: 16px; }
+    .datos { display: flex; flex-wrap: wrap; gap: 0; margin-top: 10px; border: 1px solid var(--linea); border-radius: var(--radio); background: #fff; }
+    .datos div { flex: 1 1 140px; padding: 16px 20px; }
+    .datos div + div { border-left: 1px solid var(--linea); }
+    .datos strong { display: block; font-size: 15px; }
+    .datos span { font-size: 14px; color: var(--gris); }
+
+    /* Servicios */
+    .servicios { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 48px; margin-top: 40px; border-top: 1px solid var(--linea); }
+    .servicio { display: grid; grid-template-columns: 26px 1fr; gap: 16px; padding: 24px 0; border-bottom: 1px solid var(--linea); }
+    .servicio svg { width: 22px; height: 22px; color: var(--azul); margin-top: 2px; }
+    .servicio p { color: var(--gris); font-size: 15.5px; margin-top: 5px; }
+    .servicios-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-top: 32px; }
+    .servicios-cta p { color: var(--gris); }
+
+    /* Zonas */
+    .zonas { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: center; }
+    .zonas__foto { border-radius: var(--radio); overflow: hidden; aspect-ratio: 4 / 4.6; }
+    .zonas__foto img { width: 100%; height: 100%; object-fit: cover; }
+    .barrios { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 0; padding: 0; list-style: none; }
+    .barrios li { font-size: 14.5px; padding: 7px 13px; border-radius: 999px; background: #fff; border: 1px solid var(--linea); }
+    .zonas__nota { margin-top: 22px; font-size: 15.5px; color: var(--gris); }
+    .zonas__nota a { color: var(--tinta); font-weight: 600; }
+
+    /* Preguntas */
+    .preguntas { display: grid; grid-template-columns: 340px 1fr; gap: 56px; }
+    .faq { border-top: 1px solid var(--linea); }
+    .faq details { border-bottom: 1px solid var(--linea); }
+    .faq summary {
+      list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 20px;
+      padding: 22px 0; font-weight: 600; font-size: 18px; letter-spacing: -0.01em;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; font-size: 24px; font-weight: 400; color: var(--gris); transition: transform .2s ease; }
+    .faq details[open] summary::after { transform: rotate(45deg); }
+    .faq details p { padding: 0 40px 22px 0; color: var(--gris); }
+
+    /* Cierre */
+    .cierre { background: var(--tinta); color: #fff; padding: clamp(64px, 8vw, 96px) 0; }
+    .cierre .envoltura { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px; }
+    .cierre h2 { max-width: 560px; }
+    .cierre p { color: rgba(255,255,255,.72); margin-top: 12px; max-width: 520px; }
+    .cierre__acciones { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    .pie { background: #0a0b0e; color: rgba(255,255,255,.6); font-size: 14.5px; padding: 36px 0 40px; }
+    .pie .envoltura { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px; }
+    .pie a { color: #fff; text-decoration: none; }
+    .pie strong { color: #fff; font-weight: 600; }
+
+    /* Barra fija en el celular */
+    .barra-movil { display: none; }
+
+    /* Aparición suave (si no hay JS, todo se ve) */
+    .js [data-revelar] { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+    .js [data-revelar].visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .js [data-revelar] { opacity: 1; transform: none; transition: none; }
+      .punto { animation: none; }
+    }
+
+    @media (max-width: 980px) {
+      .nav a:not(.cabecera__tel) { display: none; }
+      .problemas, .proceso, .zonas, .preguntas { grid-template-columns: 1fr; gap: 36px; }
+      .aviso { position: static; display: grid; grid-template-columns: 220px 1fr; }
+      .aviso img { height: 100%; aspect-ratio: auto; }
+      .proceso__foto, .zonas__foto { aspect-ratio: 16 / 10; }
+      .zonas__foto { order: 2; }
+    }
+    @media (max-width: 760px) {
+      :root { --cabecera: 60px; }
+      body { font-size: 16px; padding-bottom: 72px; }
+      .marca small { display: none; }
+      .cabecera__tel span { display: none; }
+      .cabecera__tel { width: 42px; padding: 0; justify-content: center; }
+      .hero { min-height: 640px; min-height: 92svh; }
+      .hero__foto img { object-position: 50% 30%; }
+      .hero__foto::after { background: linear-gradient(0deg, rgba(8,9,12,.95) 0%, rgba(8,9,12,.78) 45%, rgba(8,9,12,.25) 100%); }
+      .hero .envoltura { padding-bottom: 32px; }
+      .hero__acciones .boton { flex: 1 1 100%; }
+      .hero__garantias { gap: 8px 18px; font-size: 14px; }
+      .lista-problemas a { grid-template-columns: 40px 1fr; gap: 14px; }
+      .lista-problemas__icono { width: 40px; height: 40px; }
+      .lista-problemas__ir { grid-column: 2; }
+      .aviso { grid-template-columns: 1fr; }
+      .aviso img { aspect-ratio: 16 / 9; }
+      .servicios { grid-template-columns: 1fr; }
+      .datos div + div { border-left: 0; border-top: 1px solid var(--linea); }
+      .datos div { flex-basis: 100%; }
+      .faq details p { padding-right: 0; }
+      .cierre__acciones, .cierre__acciones .boton { width: 100%; }
+      .barra-movil {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 8px; position: fixed; inset: auto 0 0 0; z-index: 60;
+        padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.97);
+        box-shadow: 0 -1px 0 var(--linea); transform: translateY(110%); transition: transform .25s ease;
+      }
+      .barra-movil--visible { transform: none; }
+      .barra-movil .boton { min-height: 50px; padding: 0 12px; font-size: 16px; }
+      .barra-movil .boton--tel { background: var(--tinta); color: #fff; }
+    }
+  </style>
+
+  <script>
+    document.documentElement.classList.add('js');
+    // Respaldo: si algo falla, a los 4 s se muestra todo igual.
+    window.__respaldo = setTimeout(function () {
+      document.querySelectorAll('[data-revelar]').forEach(function (el) { el.classList.add('visible'); });
+    }, 4000);
+  </script>
+  <!-- Google Ads: completar CUENTA_ADS en /js/medicion.js cuando exista la cuenta nueva -->
+  <script src="/js/medicion.js" defer></script>
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-rayo" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 2 4 13.5h6.5L9.5 22 20 9.5h-6.6L13.5 2Z"/></symbol>
+    <symbol id="i-tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-alerta" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0ZM12 9v4M12 17h.01"/></symbol>
+    <symbol id="i-flecha" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-apagon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1.1 2V16h5v-.2c.1-.8.5-1.5 1.1-2A6 6 0 0 0 12 3ZM3 3l18 18"/></symbol>
+    <symbol id="i-termica" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 3h12v18H6zM10 8h4v5h-4zM12 16v2"/></symbol>
+    <symbol id="i-fuego" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 22a7 7 0 0 0 7-7c0-4-3-6-4-9-1 2-2 3-3.5 3.5C11 7 10 5 10 3 7 5 5 9 5 15a7 7 0 0 0 7 7Z"/></symbol>
+    <symbol id="i-enchufe" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 4h16v16H4zM9.5 9.5l-1 2M14.5 9.5l1 2M12 14v2.5"/></symbol>
+    <symbol id="i-casa" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 10.5 12 3l9 7.5V21H3zM9 21v-6h6v6"/></symbol>
+    <symbol id="i-cable" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 3v5M11 3v5M5 8h8v3a4 4 0 0 1-8 0V8ZM9 15v1a5 5 0 0 0 10 0V4"/></symbol>
+    <symbol id="i-tierra" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3v11M5 14h14M7.5 17.5h9M10 21h4"/></symbol>
+    <symbol id="i-luz" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1.1 2V16h5v-.2c.1-.8.5-1.5 1.1-2A6 6 0 0 0 12 3Z"/></symbol>
+    <symbol id="i-aire" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 5h18v8H3zM7 17l-1 3M12 17v3M17 17l1 3M7 10h10"/></symbol>
+    <symbol id="i-medidor" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 3h14v18H5zM8 7h8v5H8zM12 15v3"/></symbol>
+  </svg>
+
+  <header class="cabecera" data-cabecera>
+    <div class="envoltura">
+      <a class="marca" href="/" aria-label="Electricista Urgente, inicio">
+        <span class="marca__simbolo"><svg style="color:#fff"><use href="#i-rayo"/></svg></span>
+        <span>Electricista Urgente<small>Mar del Plata · 24 hs</small></span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#urgencias">Urgencias</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#zonas">Zonas</a>
+        <a href="#preguntas">Preguntas</a>
+        <a class="cabecera__tel" href="tel:+5492230000000" data-seccion="cabecera" aria-label="Llamar al 223 000-0000">
+          <svg class="icono"><use href="#i-tel"/></svg><span>223 000-0000</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <picture class="hero__foto">
+        <source media="(max-width: 760px)" srcset="/img/hero-movil-800.webp">
+        <source srcset="/img/hero-1100.webp 1100w, /img/hero-1920.webp 1920w" sizes="100vw">
+        <img src="/img/hero-1920.webp" alt="Electricista revisando un tablero eléctrico de noche con linterna" width="1920" height="1072" fetchpriority="high">
+      </picture>
+      <div class="envoltura">
+        <p class="hero__estado"><span class="punto" aria-hidden="true"></span>Atendemos ahora · todos los días, 24 hs</p>
+        <h1>Electricista urgente en Mar del Plata</h1>
+        <p class="hero__bajada">¿Se cortó la luz, salta la térmica o hay olor a quemado? Mandanos un WhatsApp con una foto y te decimos cómo seguimos. Vamos a tu casa.</p>
+        <div class="hero__acciones">
+          <a class="boton boton--wa" href="https://wa.me/5492230000000?text=Hola!%20Necesito%20un%20electricista%20urgente" data-seccion="hero">
+            <svg class="icono"><use href="#i-wa"/></svg>Escribir por WhatsApp
+          </a>
+          <a class="boton boton--tel" href="tel:+5492230000000" data-seccion="hero">
+            <svg class="icono"><use href="#i-tel"/></svg>Llamar 223 000-0000
+          </a>
+        </div>
+        <ul class="hero__garantias">
+          <li><svg><use href="#i-check"/></svg>Precio antes de empezar</li>
+          <li><svg><use href="#i-check"/></svg>Noches, findes y feriados</li>
+          <li><svg><use href="#i-check"/></svg>Efectivo, transferencia o Mercado Pago</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="seccion" id="urgencias">
+      <div class="envoltura">
+        <div data-revelar>
+          <p class="antetitulo"><svg class="icono" style="width:16px;height:16px"><use href="#i-rayo"/></svg>¿Qué te está pasando?</p>
+          <h2>Tocá tu problema y escribinos directo</h2>
+          <p class="bajada">El mensaje ya sale armado. Si podés, sumale una foto del tablero o del enchufe: así llegamos con lo que hace falta.</p>
+        </div>
+
+        <div class="problemas">
+          <ul class="lista-problemas" data-revelar>
+            <li><a href="https://wa.me/5492230000000?text=Hola!%20Me%20qued%C3%A9%20sin%20luz%20en%20casa" data-seccion="problema-sin-luz">
+              <span class="lista-problemas__icono"><svg><use href="#i-apagon"/></svg></span>
+              <div><h3>Me quedé sin luz</h3><p>En toda la casa o en una parte, y los vecinos sí tienen.</p></div>
+              <span class="lista-problemas__ir">WhatsApp<svg><use href="#i-flecha"/></svg></span>
+            </a></li>
+            <li><a href="https://wa.me/5492230000000?text=Hola!%20Me%20salta%20la%20t%C3%A9rmica%20o%20el%20disyuntor%20y%20no%20levanta" data-seccion="problema-termica">
+              <span class="lista-problemas__icono"><svg><use href="#i-termica"/></svg></span>
+              <div><h3>Salta la térmica o el disyuntor</h3><p>Baja solo, o lo subís y vuelve a saltar enseguida.</p></div>
+              <span class="lista-problemas__ir">WhatsApp<svg><use href="#i-flecha"/></svg></span>
+            </a></li>
+            <li><a href="https://wa.me/5492230000000?text=Hola!%20Hay%20olor%20a%20quemado%20o%20chispas%20en%20un%20enchufe" data-seccion="problema-quemado">
+              <span class="lista-problemas__icono"><svg><use href="#i-fuego"/></svg></span>
+              <div><h3>Olor a quemado o chispas <span class="etiqueta">Peligro</span></h3><p>Un enchufe negro, caliente o que hace ruido. Bajá la general.</p></div>
+              <span class="lista-problemas__ir">WhatsApp<svg><use href="#i-flecha"/></svg></span>
+            </a></li>
+            <li><a href="https://wa.me/5492230000000?text=Hola!%20Tengo%20un%20enchufe%20o%20una%20llave%20que%20no%20anda" data-seccion="problema-enchufe">
+              <span class="lista-problemas__icono"><svg><use href="#i-enchufe"/></svg></span>
+              <div><h3>Un enchufe o una llave no anda</h3><p>Tomas flojos, luces que parpadean, llaves que no cortan.</p></div>
+              <span class="lista-problemas__ir">WhatsApp<svg><use href="#i-flecha"/></svg></span>
+            </a></li>
+            <li><a href="https://wa.me/5492230000000?text=Hola!%20Tengo%20un%20problema%20con%20el%20pilar%20o%20el%20medidor" data-seccion="problema-pilar">
+              <span class="lista-problemas__icono"><svg><use href="#i-medidor"/></svg></span>
+              <div><h3>Problema en el pilar o el medidor</h3><p>Pilar dañado, caja rota o cables sueltos en la entrada.</p></div>
+              <span class="lista-problemas__ir">WhatsApp<svg><use href="#i-flecha"/></svg></span>
+            </a></li>
+            <li><a href="https://wa.me/5492230000000?text=Hola!%20Quiero%20pedir%20un%20presupuesto%20de%20electricidad" data-seccion="problema-presupuesto">
+              <span class="lista-problemas__icono"><svg><use href="#i-casa"/></svg></span>
+              <div><h3>No es urgente, quiero un presupuesto</h3><p>Tablero nuevo, recableado, más tomas o una obra.</p></div>
+              <span class="lista-problemas__ir">WhatsApp<svg><use href="#i-flecha"/></svg></span>
+            </a></li>
+          </ul>
+
+          <aside class="aviso" data-revelar aria-label="Qué hacer mientras llegamos">
+            <img src="/img/enchufe-700.webp" srcset="/img/enchufe-700.webp 700w, /img/enchufe-1100.webp 1100w" sizes="(max-width: 980px) 100vw, 380px" alt="Enchufe quemado con marcas de hollín en la pared" width="700" height="869" loading="lazy">
+            <div class="aviso__texto">
+              <h3><svg><use href="#i-alerta"/></svg>Mientras llegamos</h3>
+              <ol>
+                <li>Si hay olor a quemado o chispas, bajá la térmica general.</li>
+                <li>No toques cables ni enchufes con las manos mojadas.</li>
+                <li>No puentees la térmica ni el disyuntor para que «aguante».</li>
+                <li>Si hay fuego, llamá al 100 (bomberos) primero.</li>
+              </ol>
+              <a class="boton boton--azul" href="tel:+5492230000000" data-seccion="aviso">
+                <svg class="icono"><use href="#i-tel"/></svg>Llamar ahora
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion seccion--gris" id="como-trabajamos">
+      <div class="envoltura proceso">
+        <div class="proceso__foto" data-revelar>
+          <img src="/img/tablero-1100.webp" srcset="/img/tablero-700.webp 700w, /img/tablero-1100.webp 1100w" sizes="(max-width: 980px) 100vw, 560px" alt="Electricista midiendo un tablero con un multímetro" width="1100" height="1366" loading="lazy">
+        </div>
+        <div data-revelar>
+          <p class="antetitulo">Cómo trabajamos</p>
+          <h2>Sin vueltas y con el precio claro</h2>
+          <ol class="pasos">
+            <li><h3>Nos escribís o llamás</h3><p>Contanos qué pasa y en qué barrio estás. Con una foto, mejor.</p></li>
+            <li><h3>Te decimos cuándo llegamos y cuánto sale la visita</h3><p>Antes de salir, para que sepas a qué atenerte.</p></li>
+            <li><h3>Revisamos y te pasamos el precio</h3><p>Encontramos la falla y te decimos cuánto cuesta arreglarla. Empezamos solo si estás de acuerdo.</p></li>
+            <li><h3>Lo dejamos funcionando y seguro</h3><p>Probamos todo antes de irnos y te explicamos qué fue lo que falló.</p></li>
+          </ol>
+          <div class="datos">
+            <div><strong>24 hs</strong><span>todos los días</span></div>
+            <div><strong>Mar del Plata</strong><span>y alrededores</span></div>
+            <div><strong>Todos los medios</strong><span>de pago</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="servicios">
+      <div class="envoltura">
+        <div data-revelar>
+          <p class="antetitulo">Servicios de electricidad</p>
+          <h2>Urgencias y trabajos eléctricos en casas, departamentos y comercios</h2>
+        </div>
+        <div class="servicios" data-revelar>
+          <div class="servicio"><svg><use href="#i-apagon"/></svg><div><h3>Cortes de luz y fallas eléctricas</h3><p>Buscamos y reparamos la falla cuando te quedás sin luz en toda la casa o en un sector.</p></div></div>
+          <div class="servicio"><svg><use href="#i-termica"/></svg><div><h3>Térmicas y disyuntores</h3><p>Disyuntor que salta, térmica que no levanta, fugas a tierra. Cambio e instalación de protecciones.</p></div></div>
+          <div class="servicio"><svg><use href="#i-medidor"/></svg><div><h3>Tableros eléctricos</h3><p>Reparación, armado y cambio de tableros viejos por tableros nuevos y seguros.</p></div></div>
+          <div class="servicio"><svg><use href="#i-casa"/></svg><div><h3>Pilar de luz y conexión al medidor</h3><p>Reparación de pilares, cajas de medidor y acometida, listos para EDEA.</p></div></div>
+          <div class="servicio"><svg><use href="#i-tierra"/></svg><div><h3>Puesta a tierra</h3><p>Instalación y medición de jabalina para que el disyuntor proteja de verdad.</p></div></div>
+          <div class="servicio"><svg><use href="#i-cable"/></svg><div><h3>Cableado y recableado</h3><p>Cambio de cables viejos o recalentados, nuevos circuitos y ampliaciones.</p></div></div>
+          <div class="servicio"><svg><use href="#i-enchufe"/></svg><div><h3>Tomas, llaves y enchufes</h3><p>Reparación y colocación de tomacorrientes, llaves de luz y cajas.</p></div></div>
+          <div class="servicio"><svg><use href="#i-luz"/></svg><div><h3>Iluminación</h3><p>Instalación de lámparas, apliques, luces LED y luces exteriores.</p></div></div>
+          <div class="servicio"><svg><use href="#i-aire"/></svg><div><h3>Líneas para aire acondicionado</h3><p>Circuitos exclusivos para aires, termotanques eléctricos y anafes.</p></div></div>
+          <div class="servicio"><svg><use href="#i-fuego"/></svg><div><h3>Cortocircuitos y recalentamientos</h3><p>Enchufes quemados, olor a quemado, cables calientes: lo resolvemos antes de que pase a mayores.</p></div></div>
+        </div>
+        <div class="servicios-cta" data-revelar>
+          <p>¿No ves lo que necesitás? Preguntanos igual.</p>
+          <a class="boton boton--wa" href="https://wa.me/5492230000000?text=Hola!%20Quiero%20consultar%20por%20un%20trabajo%20de%20electricidad" data-seccion="servicios">
+            <svg class="icono"><use href="#i-wa"/></svg>Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion seccion--gris" id="zonas">
+      <div class="envoltura zonas">
+        <div data-revelar>
+          <p class="antetitulo">Zonas de trabajo</p>
+          <h2>Vamos a todo Mar del Plata y alrededores</h2>
+          <p class="bajada">Del centro a los barrios, y también a Batán, Sierra de los Padres y la costa norte.</p>
+          <ul class="barrios">
+            <li>Centro</li><li>Plaza Mitre</li><li>Plaza Colón</li><li>Güemes</li><li>Los Troncos</li><li>Playa Grande</li>
+            <li>Chauvín</li><li>San José</li><li>Constitución</li><li>Camet</li><li>Parque Luro</li><li>Don Bosco</li>
+            <li>San Carlos</li><li>Malvinas</li><li>Punta Mogotes</li><li>Faro Norte</li><li>Bosque Peralta Ramos</li>
+            <li>Alfar</li><li>Batán</li><li>Sierra de los Padres</li><li>Santa Clara del Mar</li>
+          </ul>
+          <p class="zonas__nota">¿Tu barrio no está? <a href="https://wa.me/5492230000000?text=Hola!%20%C2%BFLlegan%20a%20mi%20barrio%3F" data-seccion="zonas">Preguntanos por WhatsApp</a> y te confirmamos en el momento.</p>
+        </div>
+        <div class="zonas__foto" data-revelar>
+          <img src="/img/pilar-1100.webp" srcset="/img/pilar-700.webp 700w, /img/pilar-1100.webp 1100w" sizes="(max-width: 980px) 100vw, 520px" alt="Casa de barrio en Mar del Plata con pilar de luz y medidor" width="1100" height="1366" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="preguntas">
+      <div class="envoltura preguntas">
+        <div data-revelar>
+          <p class="antetitulo">Preguntas frecuentes</p>
+          <h2>Lo que más nos preguntan</h2>
+          <p class="bajada">¿Te queda una duda? Escribinos y te contestamos al toque.</p>
+        </div>
+        <div class="faq" data-revelar>
+          <details open><summary>¿Atienden de noche, fines de semana y feriados?</summary><p>Sí. Las urgencias eléctricas no esperan al lunes: atendemos las 24 horas, todos los días, en Mar del Plata y alrededores.</p></details>
+          <details><summary>¿Cuánto cuesta la visita?</summary><p>Depende de la zona y del horario. Te lo decimos por WhatsApp antes de salir, y una vez en tu casa te pasamos el precio del trabajo antes de empezar. Sin sorpresas.</p></details>
+          <details><summary>Salta la térmica o el disyuntor y no levanta, ¿qué hago?</summary><p>Desenchufá todo y probá subirlo de nuevo. Si vuelve a saltar, hay una falla o una fuga a tierra: no lo fuerces ni lo puentees. Dejalo bajo y escribinos.</p></details>
+          <details><summary>Hay olor a quemado o un enchufe se puso negro, ¿es urgente?</summary><p>Sí. Bajá la térmica general, no toques el enchufe ni lo uses, y llamanos. Es una de las causas más comunes de incendio en casas.</p></details>
+          <details><summary>¿Cómo se paga?</summary><p>Efectivo, transferencia o Mercado Pago.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cierre">
+      <div class="envoltura">
+        <div>
+          <h2>¿Problema eléctrico ahora? Escribinos y vamos.</h2>
+          <p>Electricista urgente en Mar del Plata, las 24 horas.</p>
+        </div>
+        <div class="cierre__acciones">
+          <a class="boton boton--wa" href="https://wa.me/5492230000000?text=Hola!%20Necesito%20un%20electricista%20urgente" data-seccion="cierre">
+            <svg class="icono"><use href="#i-wa"/></svg>WhatsApp
+          </a>
+          <a class="boton boton--tel" href="tel:+5492230000000" data-seccion="cierre">
+            <svg class="icono"><use href="#i-tel"/></svg>223 000-0000
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="envoltura">
+      <p><strong>Electricista Urgente</strong> · Mar del Plata y alrededores · 24 hs</p>
+      <p><a href="tel:+5492230000000" data-seccion="pie">223 000-0000</a> · © 2026</p>
+    </div>
+  </footer>
+
+  <div class="barra-movil" aria-label="Contacto rápido">
+    <a class="boton boton--tel" href="tel:+5492230000000" data-seccion="barra-movil"><svg class="icono"><use href="#i-tel"/></svg>Llamar</a>
+    <a class="boton boton--wa" href="https://wa.me/5492230000000?text=Hola!%20Necesito%20un%20electricista%20urgente" data-seccion="barra-movil"><svg class="icono"><use href="#i-wa"/></svg>WhatsApp</a>
+  </div>
+
+  <script>
+    (function () {
+      // Cabecera sólida al scrollear y barra de contacto en el celular cuando el hero queda atrás.
+      var cabecera = document.querySelector('[data-cabecera]');
+      var barra = document.querySelector('.barra-movil');
+      var hero = document.querySelector('.hero');
+      function segunScroll() { cabecera.classList.toggle('cabecera--solida', window.scrollY > 24); }
+      segunScroll();
+      window.addEventListener('scroll', segunScroll, { passive: true });
+
+      var bloques = document.querySelectorAll('[data-revelar]');
+      if (!('IntersectionObserver' in window)) {
+        barra.classList.add('barra-movil--visible');
+        bloques.forEach(function (el) { el.classList.add('visible'); });
+        return;
+      }
+      new IntersectionObserver(function (e) {
+        barra.classList.toggle('barra-movil--visible', !e[0].isIntersecting);
+      }, { rootMargin: '0px 0px -40% 0px' }).observe(hero);
+
+      var obs = new IntersectionObserver(function (entradas) {
+        entradas.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add('visible'); obs.unobserve(en.target); }
+        });
+      }, { rootMargin: '0px 0px -8% 0px' });
+      bloques.forEach(function (el) { obs.observe(el); });
+      clearTimeout(window.__respaldo);
+    })();
+  </script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script src="/_vercel/insights/script.js" defer></script>
+</body>
+</html>
