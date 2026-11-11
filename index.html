@@ -374,7 +374,7 @@
     .miga a { color: var(--tenue); text-underline-offset: 3px; }
     .miga a:hover { color: var(--acento); }
 
-    /* Barra fija de 24 hs: toda es un botón de llamada; el reloj muestra la hora de Mar del Plata */
+    /* Barra fija de 24 hs: toda es un botón de llamada */
     .aviso24 {
       position: fixed; inset: 0 0 auto 0; z-index: 70; height: var(--aviso); overflow: hidden; isolation: isolate;
       display: flex; align-items: center; justify-content: center; gap: 18px; padding: 0 var(--margen);
@@ -386,16 +386,10 @@
       transform: translateX(-100%); animation: brillo 7s var(--curva) 2s infinite;
     }
     .aviso24__24 { display: inline-flex; align-items: center; height: 28px; padding: 0 12px; border-radius: 999px; background: var(--noche); color: var(--sodio); font-weight: 800; letter-spacing: -0.01em; animation: prender 1.4s steps(1, end) .3s both; }
-    .aviso24__hora { display: none; }
-    .js .aviso24__hora { display: inline; }
-    .aviso24__hora b { font-weight: 800; font-variant-numeric: tabular-nums; }
-    .aviso24__dos { animation: segundo 1s steps(1, end) infinite; }
     .aviso24__llamar { display: inline-flex; align-items: center; gap: 6px; font-weight: 750; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 2px; }
     .aviso24__llamar .ico { width: 16px; height: 16px; }
     .aviso24:hover .aviso24__llamar { text-decoration-color: transparent; }
-    .js .aviso24__fijo-largo { display: none; }
     @keyframes brillo { 0% { transform: translateX(-100%); } 22%, 100% { transform: translateX(100%); } }
-    @keyframes segundo { 0% { opacity: 1; } 50% { opacity: .25; } }
 
     /* Barra fija en el celular */
     .barra-movil { display: none; }
@@ -425,7 +419,8 @@
     @media (max-width: 860px) {
       :root { --cabecera: 64px; --aviso: 40px; }
       .aviso24 { gap: 10px; font-size: 14px; }
-      .aviso24__fijo, .aviso24__llamar { display: none; }
+      .aviso24 { font-size: 13px; }
+      .aviso24__fijo-largo, .aviso24__llamar { display: none; }
       body { font-size: 16px; padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
       .nav__enlace { display: none; }
       .marca__logo { height: 40px; }
@@ -491,7 +486,6 @@
   <a class="aviso24" href="tel:+5492235013375" data-seccion="aviso-24" aria-label="Atendemos las 24 horas, todos los días. Llamar al 223 501-3375">
     <span class="aviso24__24">24 hs</span>
     <span class="aviso24__fijo">Atendemos todos los días, también feriados<span class="aviso24__fijo-largo">: llamá cuando lo necesites</span></span>
-    <span class="aviso24__hora" aria-hidden="true">Son las <b data-hora><span data-h>--</span><span class="aviso24__dos">:</span><span data-m>--</span></b> y estamos atendiendo</span>
     <span class="aviso24__llamar">Llamar ahora<svg class="ico ico-trazo"><use href="#i-flecha"/></svg></span>
   </a>
 
@@ -744,18 +738,6 @@
         var cabecera = document.querySelector('[data-cabecera]');
         var barra = document.querySelector('.barra-movil');
         var portada = document.querySelector('[data-portada]');
-
-        // Barra de 24 hs: hora de Mar del Plata, actualizada cada 10 s
-        var hh = document.querySelector('[data-h]'), mm = document.querySelector('[data-m]');
-        if (hh && window.Intl) {
-          var formato = new Intl.DateTimeFormat('es-AR', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'America/Argentina/Buenos_Aires' });
-          var marcar = function () {
-            var partes = formato.formatToParts(new Date());
-            partes.forEach(function (p) { if (p.type === 'hour') hh.textContent = p.value; if (p.type === 'minute') mm.textContent = p.value; });
-          };
-          marcar();
-          setInterval(marcar, 10000);
-        }
 
         // Cabecera sólida al scrollear
         function segunScroll() { cabecera.classList.toggle('cabecera--solida', window.scrollY > 24); }

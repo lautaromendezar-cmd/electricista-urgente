@@ -22,8 +22,8 @@ Landing de electricista de urgencia en **Mar del Plata** para Dario.
 ## Barra de 24 hs (11/11, pedido de Dario)
 
 - Barra ámbar fija arriba de todo (clase aviso24, alto en la variable aviso: 44 px; 40 px en celular). Toda la barra llama al teléfono y se mide como conversión con data-seccion aviso-24.
-- Muestra la hora real de Mar del Plata (Intl, zona America/Argentina/Buenos_Aires): «Son las 23:47 y estamos atendiendo». Sin JS no aparece el reloj y se ve el texto fijo.
-- Animación: la pastilla 24 hs se prende con parpadeo al cargar, los dos puntos del reloj marcan los segundos y cada 7 s cruza un brillo. Con reducir movimiento queda quieta.
+- Texto: «24 hs · Atendemos todos los días, también feriados: llamá cuando lo necesites · Llamar ahora» (en celular, solo la pastilla y «Atendemos todos los días, también feriados»). El reloj con la hora real se probó y **Lautaro lo sacó** el 11/11.
+- Animación: la pastilla 24 hs se prende con parpadeo al cargar y cada 7 s cruza un brillo. Con reducir movimiento queda quieta.
 - Está antes de la cabecera, así que el generador la copia a las páginas de servicio.
 
 ## Servicios = los de Manos Expertas (11/11, decisión de Lautaro)
