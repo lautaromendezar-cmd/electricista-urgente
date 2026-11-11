@@ -25,7 +25,9 @@ Landing de electricista de urgencia en **Mar del Plata** para Dario.
 - Manos Expertas ofrece: urgencias (corte de luz, salta la térmica o el disyuntor, olor a quemado en enchufes, cortocircuitos, fases caídas) + Instalaciones, Tableros (revisión y reparación de tableros, térmicas y disyuntores), Iluminación y Mantenimiento. Y aclara que lo suyo es **«de la caja del medidor para adentro»**: lo de afuera es de la distribuidora (acá EDEA).
 - Hecho: `/pilar-de-luz` borrada, con redirección 301 a la home en `vercel.json`; `/tableros-electricos` pasó a revisión y reparación; home con «Media casa sin luz» (fase caída) y la lista de servicios de Manos Expertas; foto nueva `luz-noche` (iluminación, Higgsfield) en el collage.
 - Ads (`herramientas/ads_servicios_11nov.py`): grupo «Pilar de luz» borrado, Tableros sin claves de puesta a tierra ni cambio de tablero, RSA rehechos sin pilares, puesta a tierra ni comercios, sitelink del pilar → «Zonas de trabajo», fragmento con los servicios de Manos Expertas.
-- **Nada de esto lo confirmó Dario.** Sigue pendiente que confirme 24 hs, zonas (Batán, Sierra, Santa Clara), visita y medios de pago.
+- **11/11, Lautaro confirmó:** 24 hs OK; **zonas = las de La Perla** (Mar del Plata, Sierra de los Padres, Santa Clara del Mar, Miramar, Villa Gesell, Mar de las Pampas, Mar Azul; sin Batán); fotos de IA OK. **La visita no se sabe: no se menciona** (se sacó el paso y la pregunta). Medios de pago y matrícula: no se mencionan.
+- Ads alineados el 11/11 (`herramientas/ads_coherencia_11nov.py`): sin «visita» ni «Batán», sitelink de Tableros corregido (decía «Cambio y armado / puesta a tierra»), ubicaciones + Miramar y partido de Villa Gesell. Barrido final: 188 textos y claves de Ads y las 4 páginas sin términos prohibidos.
+- Lautaro le pasa el link a Dario para revisar (11/11).
 
 ## Rediseño 11/11 (referencia «Voltify» que pasó Lautaro)
 
