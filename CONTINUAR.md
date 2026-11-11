@@ -29,6 +29,13 @@ Landing de electricista de urgencia en **Mar del Plata** para Dario.
 
 Fuera: punto de «atendemos ahora», checks de la portada, cinta con puntos, rótulos con guion, puntos de servicios, cifras y la pregunta de medios de pago. **No volver a meter puntitos decorativos ni listas de checks: le parecen «IA slop».**
 
+## Páginas de servicio (10/11)
+
+- `/sin-luz`, `/salta-la-termica`, `/pilar-de-luz`, `/tableros-electricos`. **Se generan con `node herramientas/generar-paginas.mjs`** a partir de `index.html` (toma head/estilos, cabecera, pie y scripts): **después de tocar el diseño de la home, volver a correrlo.** Los textos de cada página están en ese archivo. También regenera el `sitemap.xml`.
+- Cada una: portada con foto propia, causas (con WhatsApp armado por causa), consejos, pasos, preguntas, «Otros problemas» y cierre. Schema Service + FAQPage + BreadcrumbList.
+- La home enlaza desde Servicios (4 títulos con flecha) y desde el pie.
+- Ads: cada grupo apunta a su página (`herramientas/ads_paginas_10nov.py`).
+
 ## Google Ads — cuenta «Electricista Urgente» 586-442-4444
 
 - Accesible con las credenciales del MCP (`~/.google-ads-mcp/`), facturación aprobada, ARS, autoetiquetado activo.
