@@ -17,9 +17,9 @@ const TEL = '5492235013375';
 const TEL_VER = '223 501-3375';
 
 const FOTOS = {
-  calle: { src: 'calle-noche', alt: 'Calle de Mar del Plata de noche, con las casas sin luz', pos: '50% 50%' },
-  tablero: { src: 'tablero-noche', alt: 'Electricista midiendo un tablero con un multímetro, de noche', pos: '50% 40%' },
-  pilar: { src: 'pilar-noche', alt: 'Pilar de luz con el medidor iluminado con una linterna, de noche', pos: '30% 50%' },
+  calle: { src: 'calle-noche', alt: 'Calle de un barrio de Mar del Plata de noche, con las casas sin luz', pos: '50% 50%' },
+  tablero: { src: 'tablero-noche', alt: 'Electricista a domicilio midiendo un tablero eléctrico con un multímetro', pos: '50% 40%' },
+  pilar: { src: 'pilar-noche', alt: 'Pilar de luz con el medidor de EDEA iluminado con una linterna', pos: '30% 50%' },
   enchufe: { src: 'enchufe-noche', alt: 'Enchufe quemado con hollín en la pared, iluminado con una linterna', pos: '50% 50%' },
 };
 
@@ -191,7 +191,7 @@ const sinHtml = s => s.replace(/<[^>]+>/g, '');
 const wa = (texto) => `https://wa.me/${TEL}?text=${encodeURIComponent(texto)}`;
 
 function imagen(clave, sizes, extra = '') {
-  if (clave === 'hero') return `<img src="/img/hero-1920.webp" srcset="/img/hero-1100.webp 1100w, /img/hero-1920.webp 1920w" sizes="${sizes}" alt="Electricista revisando un tablero eléctrico de noche con linterna" width="1920" height="1072"${extra}>`;
+  if (clave === 'hero') return `<img src="/img/hero-1920.webp" srcset="/img/hero-1100.webp 1100w, /img/hero-1920.webp 1920w" sizes="${sizes}" alt="Electricista de urgencia revisando un tablero eléctrico de noche en Mar del Plata" width="1920" height="1072"${extra}>`;
   const f = FOTOS[clave];
   return `<img src="/img/${f.src}-900.webp" srcset="/img/${f.src}-700.webp 700w, /img/${f.src}-900.webp 900w" sizes="${sizes}" alt="${esc(f.alt)}" width="900" height="1125"${extra}>`;
 }
