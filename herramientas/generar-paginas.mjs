@@ -30,19 +30,21 @@ const PAGINAS = [
     titulo: 'Sin luz en casa en Mar del Plata · Electricista urgente 24 hs',
     descripcion: '¿Te quedaste sin luz y los vecinos tienen? Electricista urgente en Mar del Plata: encontramos la falla y te devolvemos la luz. Escribinos por WhatsApp.',
     servicio: 'Reparación de cortes de luz y fallas eléctricas',
-    clave: 'Electricista por cortes de luz en Mar del Plata',
+    clave: 'Sin luz en casa: electricista de urgencia en Mar del Plata',
+    tema: 'cortes de luz',
+    pasosTitulo: 'Cómo te devolvemos <em>la luz.</em>',
     grande: ['¿Sin luz', 'en casa?', '<em>Vamos.</em>'],
     bajada: 'Si los vecinos tienen luz y vos no, la falla está en tu instalación. Mandanos una foto del tablero y vamos.',
     wa: 'Hola! Me quedé sin luz en casa',
     foto: 'calle',
-    causasTitulo: 'Por qué te quedaste <em>sin luz.</em>',
+    causasTitulo: 'Por qué se corta la luz <em>en tu casa.</em>',
     causas: [
       ['Saltó la térmica o el disyuntor', 'Mirá el tablero: si alguna llave está abajo, ahí está la pista.', 'Hola! Me quedé sin luz y saltó la térmica o el disyuntor'],
       ['Un cortocircuito', 'Un cable pelado, un enchufe quemado o un artefacto en corto hacen saltar todo.', 'Hola! Creo que tengo un cortocircuito'],
       ['Una falla en el pilar o la entrada', 'Si el tablero está bien y no hay luz, el problema puede estar antes: en el pilar o en la acometida.', 'Hola! Me quedé sin luz y el tablero parece estar bien'],
       ['Un corte de EDEA', 'Si tus vecinos tampoco tienen luz, es un corte general: ahí hay que reclamarle a EDEA.', 'Hola! No sé si el corte de luz es mío o de EDEA'],
     ],
-    consejosTitulo: 'Antes de que <em>lleguemos.</em>',
+    consejosTitulo: 'Qué hacer mientras <em>llega el electricista.</em>',
     consejos: [
       'Fijate si tus vecinos tienen luz.',
       'Mirá el tablero: si una térmica o el disyuntor están abajo, <strong>probá subirlos una sola vez.</strong>',
@@ -68,7 +70,9 @@ const PAGINAS = [
     titulo: 'Salta la térmica o el disyuntor en Mar del Plata · Electricista 24 hs',
     descripcion: '¿Salta la térmica o el disyuntor y no levanta? Electricista en Mar del Plata: encontramos la fuga o el corto y lo dejamos funcionando. Escribinos.',
     servicio: 'Reparación de térmicas y disyuntores que saltan',
-    clave: 'Electricista para térmicas y disyuntores en Mar del Plata',
+    clave: 'Salta la térmica o el disyuntor: electricista en Mar del Plata',
+    tema: 'térmicas y disyuntores',
+    pasosTitulo: 'Cómo encontramos <em>la falla.</em>',
     grande: ['¿Salta', 'la térmica?', '<em>Vamos.</em>'],
     bajada: 'Si la subís y vuelve a saltar, hay una falla. No la fuerces: mandanos una foto del tablero.',
     wa: 'Hola! Me salta la térmica o el disyuntor y no levanta',
@@ -80,7 +84,7 @@ const PAGINAS = [
       ['Salta cuando enchufás algo', 'Casi siempre es ese artefacto. Desenchufalo y probá de nuevo.', 'Hola! Me salta la térmica cuando enchufo algo'],
       ['Salta cuando llueve', 'Entra humedad en alguna caja, en el pilar o en una instalación exterior.', 'Hola! Me salta el disyuntor cuando llueve'],
     ],
-    consejosTitulo: 'Qué podés <em>probar.</em>',
+    consejosTitulo: 'Qué podés probar <em>antes de llamar.</em>',
     consejos: [
       'Desenchufá todo y subí la llave una vez.',
       'Si se mantiene, enchufá los artefactos de a uno: <strong>el que la hace saltar es el culpable.</strong>',
@@ -106,12 +110,14 @@ const PAGINAS = [
     titulo: 'Pilar de luz en Mar del Plata · Pilar y medidor para EDEA',
     descripcion: 'Armamos y reparamos pilares de luz en Mar del Plata: caja de medidor, tablero de entrada y puesta a tierra, listos para EDEA. Pedí presupuesto por WhatsApp.',
     servicio: 'Armado y reparación de pilares de luz',
-    clave: 'Pilar de luz y medidor en Mar del Plata',
+    clave: 'Pilar de luz en Mar del Plata, listo para EDEA',
+    tema: 'pilares de luz',
+    pasosTitulo: 'Cómo armamos <em>el pilar de luz.</em>',
     grande: ['Pilar de luz', 'listo para', '<em>EDEA.</em>'],
     bajada: 'Armamos el pilar nuevo o reparamos el que tenés. Mandanos una foto y te pasamos presupuesto.',
     wa: 'Hola! Quiero consultar por un pilar de luz',
     foto: 'pilar',
-    causasTitulo: 'Cuándo <em>hace falta.</em>',
+    causasTitulo: 'Cuándo hace falta <em>un pilar de luz.</em>',
     causas: [
       ['Conexión nueva', 'Casa a estrenar, obra o terreno que necesita el medidor de EDEA.', 'Hola! Necesito un pilar de luz para una conexión nueva'],
       ['Pilar dañado', 'Pilar roto, caja quebrada, tapa que no cierra o cables a la vista.', 'Hola! Tengo el pilar de luz dañado'],
@@ -144,19 +150,21 @@ const PAGINAS = [
     titulo: 'Tableros eléctricos en Mar del Plata · Cambio y armado',
     descripcion: 'Cambio y armado de tableros eléctricos en Mar del Plata: térmicas, disyuntor y puesta a tierra. Presupuesto por WhatsApp antes de empezar.',
     servicio: 'Cambio y armado de tableros eléctricos',
-    clave: 'Tableros eléctricos en Mar del Plata',
+    clave: 'Tableros eléctricos en Mar del Plata: cambio y armado',
+    tema: 'tableros eléctricos',
+    pasosTitulo: 'Cómo cambiamos <em>el tablero eléctrico.</em>',
     grande: ['Tablero', 'nuevo,', '<em>seguro.</em>'],
     bajada: 'Cambiamos tableros viejos por tableros con térmicas, disyuntor y puesta a tierra. Presupuesto antes de empezar.',
     wa: 'Hola! Quiero un presupuesto para cambiar el tablero eléctrico',
     foto: 'hero',
-    causasTitulo: 'Cuándo conviene <em>cambiarlo.</em>',
+    causasTitulo: 'Cuándo conviene <em>cambiar el tablero.</em>',
     causas: [
       ['No tiene disyuntor', 'Sin disyuntor, una fuga de corriente puede electrocutar a alguien sin que nada corte.', 'Hola! Mi tablero no tiene disyuntor'],
       ['Tiene fusibles o tapones', 'Las instalaciones viejas con fusibles no protegen como corresponde.', 'Hola! Mi tablero todavía tiene fusibles'],
       ['Se calienta o huele a quemado', 'Una térmica caliente o con marcas negras es una falla en curso.', 'Hola! El tablero se calienta o huele a quemado'],
       ['Vas a sumar consumo', 'Aires, horno eléctrico o termotanque necesitan circuitos y protecciones propias.', 'Hola! Voy a sumar aires o artefactos y quiero revisar el tablero'],
     ],
-    consejosTitulo: 'Señales <em>de alarma.</em>',
+    consejosTitulo: 'Señales de que <em>hay que cambiar el tablero.</em>',
     consejos: [
       '<strong>Térmicas calientes</strong> al tacto o con olor a quemado.',
       'Marcas negras o plástico derretido en el tablero.',
@@ -202,12 +210,10 @@ function principal(p) {
       </div>
       <div class="portada__texto">
         <p class="miga"><a href="/">Inicio</a> / ${esc(p.corto)}</p>
-        <h1>
-          <span class="portada__clave">${esc(p.clave)}</span>
-          <span class="portada__grande display">
-${p.grande.map(l => `            <span class="renglon"><span>${l}</span></span>`).join('\n')}
-          </span>
-        </h1>
+        <h1 class="portada__clave">${esc(p.clave)}</h1>
+        <p class="portada__grande display">
+${p.grande.map(l => `          <span class="renglon"><span>${l}</span></span>`).join('\n')}
+        </p>
         <p class="portada__bajada">${esc(p.bajada)}</p>
         <div class="portada__acciones">
           <a class="boton boton--wa" href="${wa(p.wa)}" data-seccion="${p.slug}-portada">
@@ -256,7 +262,7 @@ ${p.consejos.map(c => `            <li><span>${c}</span></li>`).join('\n')}
 
     <section class="seccion grano">
       <div class="envoltura">
-        <h2 data-revelar>Qué <em>hacemos.</em></h2>
+        <h2 data-revelar>${p.pasosTitulo}</h2>
         <ol class="pasos" data-revelar>
 ${p.pasos.map(([t, d]) => `          <li><h3>${esc(t)}</h3><p>${esc(d)}</p></li>`).join('\n')}
         </ol>
@@ -266,7 +272,7 @@ ${p.pasos.map(([t, d]) => `          <li><h3>${esc(t)}</h3><p>${esc(d)}</p></li>
     <section class="seccion grano" id="preguntas">
       <div class="envoltura preguntas">
         <div data-revelar>
-          <h2>Preguntas <em>frecuentes.</em></h2>
+          <h2>Preguntas frecuentes sobre <em>${esc(p.tema)}.</em></h2>
         </div>
         <div class="faq" data-revelar>
 ${p.faq.map(([q, a], i) => `          <details${i === 0 ? ' open' : ''}><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('\n')}
@@ -276,7 +282,7 @@ ${p.faq.map(([q, a], i) => `          <details${i === 0 ? ' open' : ''}><summary
 
     <section class="seccion grano mientras">
       <div class="envoltura">
-        <h2 data-revelar>Otros <em>problemas.</em></h2>
+        <h2 data-revelar>Otros servicios de electricista <em>en Mar del Plata.</em></h2>
         <ul class="otros" data-revelar>
 ${otros.map(o => `          <li><a href="/${o.slug}"><strong>${esc(o.corto)}</strong><span>Ver más<svg class="ico ico-trazo"><use href="#i-flecha"/></svg></span></a></li>`).join('\n')}
           <li><a href="/"><strong>Todos los servicios</strong><span>Inicio<svg class="ico ico-trazo"><use href="#i-flecha"/></svg></span></a></li>
@@ -286,6 +292,7 @@ ${otros.map(o => `          <li><a href="/${o.slug}"><strong>${esc(o.corto)}</st
 
     <section class="cierre">
       <div class="envoltura" data-revelar>
+        <h2 class="cierre__titulo">¿Necesitás un electricista <em>ahora?</em></h2>
         <a class="cierre__tel" href="tel:+${TEL}" data-seccion="${p.slug}-cierre" aria-label="Llamar al ${TEL_VER}">${TEL_VER}</a>
         <div class="cierre__pie">
           <p>Electricista urgente en Mar del Plata, las 24 horas. Escribinos y vamos.</p>

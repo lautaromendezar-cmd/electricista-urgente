@@ -81,7 +81,7 @@
     h2, .display {
       font-stretch: 86%; font-weight: 800; letter-spacing: -0.025em; line-height: .94;
     }
-    h2 { font-size: clamp(40px, 6vw, 88px); text-wrap: balance; }
+    h2 { font-size: clamp(34px, 4.3vw, 64px); line-height: 1; text-wrap: balance; }
     h3 { font-weight: 650; letter-spacing: -0.01em; line-height: 1.2; }
     em { font-style: normal; color: var(--sodio); }
     .envoltura { width: 100%; max-width: var(--ancho); margin: 0 auto; padding: 0 var(--margen); }
@@ -159,7 +159,7 @@
       padding: calc(var(--cabecera) + 56px) 0 clamp(48px, 7vh, 88px) max(var(--margen), calc((100vw - var(--ancho)) / 2 + var(--margen)));
       margin-right: -16vw;
     }
-    .portada h1 { font-weight: inherit; }
+    .portada h1 { margin: 0; }
     .portada__clave { display: block; font-size: clamp(16px, 1.35vw, 19px); font-weight: 600; color: var(--hueso); letter-spacing: -0.005em; margin-bottom: 22px; }
     .portada__grande { display: block; font-size: clamp(64px, 9.4vw, 158px); }
     .renglon { display: block; overflow: hidden; padding-bottom: .04em; margin-bottom: -.04em; }
@@ -198,7 +198,8 @@
     .indice p { color: var(--tenue); font-size: 16px; }
     .indice__ir { justify-self: end; display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; color: var(--tenue); transition: color .3s ease; }
     .indice__ir .ico { width: 18px; height: 18px; transition: transform .5s var(--curva); }
-    .etiqueta { display: inline-block; vertical-align: middle; margin-left: 14px; padding: 5px 10px 4px; border-radius: 999px; font-stretch: 100%; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--peligro); box-shadow: inset 0 0 0 1px rgba(255, 106, 77, .5); }
+    .indice__titulo { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+    .etiqueta { display: inline-block; padding: 5px 10px 4px; border-radius: 999px; font-stretch: 100%; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--peligro); box-shadow: inset 0 0 0 1px rgba(255, 106, 77, .5); }
     @media (hover: hover) {
       .indice a:hover::before { transform: scaleX(1); }
       .indice a:hover h3 { color: var(--sodio); transform: translateX(10px); }
@@ -273,6 +274,7 @@
       content: ""; position: absolute; z-index: -1; left: 50%; bottom: -55%; width: 140vw; height: 120%; transform: translateX(-50%);
       background: radial-gradient(closest-side, rgba(255, 181, 71, .22), rgba(255, 181, 71, .06) 55%, rgba(255, 181, 71, 0));
     }
+    .cierre__titulo { margin-bottom: 8px; }
     .cierre__tel {
       display: block; margin-top: 24px; text-decoration: none; font-stretch: 75%; font-weight: 800;
       font-size: clamp(64px, 14vw, 232px); line-height: .9; letter-spacing: -0.035em; font-variant-numeric: tabular-nums; white-space: nowrap;
@@ -352,7 +354,6 @@
       .indice h3 { font-size: clamp(26px, 7.4vw, 34px); }
       .indice p { grid-column: 2; grid-row: auto; margin-top: 8px; font-size: 15px; }
       .indice__ir { grid-column: 2; grid-row: auto; justify-self: start; margin-top: 12px; color: var(--sodio); }
-      .etiqueta { margin-left: 10px; }
       .mientras__foto { aspect-ratio: 4 / 3.4; }
       .pasos { grid-template-columns: 1fr; row-gap: 40px; }
       .pasos li::before { font-size: 72px; margin-bottom: 18px; }
@@ -418,14 +419,12 @@
       </div>
       <div class="portada__texto">
         <p class="miga"><a href="/">Inicio</a> / Tableros eléctricos</p>
-        <h1>
-          <span class="portada__clave">Tableros eléctricos en Mar del Plata</span>
-          <span class="portada__grande display">
-            <span class="renglon"><span>Tablero</span></span>
-            <span class="renglon"><span>nuevo,</span></span>
-            <span class="renglon"><span><em>seguro.</em></span></span>
-          </span>
-        </h1>
+        <h1 class="portada__clave">Tableros eléctricos en Mar del Plata: cambio y armado</h1>
+        <p class="portada__grande display">
+          <span class="renglon"><span>Tablero</span></span>
+          <span class="renglon"><span>nuevo,</span></span>
+          <span class="renglon"><span><em>seguro.</em></span></span>
+        </p>
         <p class="portada__bajada">Cambiamos tableros viejos por tableros con térmicas, disyuntor y puesta a tierra. Presupuesto antes de empezar.</p>
         <div class="portada__acciones">
           <a class="boton boton--wa" href="https://wa.me/5492235013375?text=Hola!%20Quiero%20un%20presupuesto%20para%20cambiar%20el%20tablero%20el%C3%A9ctrico" data-seccion="tableros-electricos-portada">
@@ -441,7 +440,7 @@
     <section class="seccion grano" id="causas">
       <div class="envoltura">
         <div class="encabezado" data-revelar>
-          <h2>Cuándo conviene <em>cambiarlo.</em></h2>
+          <h2>Cuándo conviene <em>cambiar el tablero.</em></h2>
           <p class="bajada">Tocá la que se parece a lo tuyo: el WhatsApp sale armado.</p>
         </div>
         <ul class="indice" data-revelar>
@@ -479,7 +478,7 @@
           <img src="/img/tablero-noche-900.webp" srcset="/img/tablero-noche-700.webp 700w, /img/tablero-noche-900.webp 900w" sizes="(max-width: 860px) 100vw, 40vw" alt="Electricista midiendo un tablero con un multímetro, de noche" width="900" height="1125" loading="lazy">
         </div>
         <div data-revelar>
-          <h2 id="consejos-titulo">Señales <em>de alarma.</em></h2>
+          <h2 id="consejos-titulo">Señales de que <em>hay que cambiar el tablero.</em></h2>
           <ol class="consejos">
             <li><span><strong>Térmicas calientes</strong> al tacto o con olor a quemado.</span></li>
             <li><span>Marcas negras o plástico derretido en el tablero.</span></li>
@@ -495,7 +494,7 @@
 
     <section class="seccion grano">
       <div class="envoltura">
-        <h2 data-revelar>Qué <em>hacemos.</em></h2>
+        <h2 data-revelar>Cómo cambiamos <em>el tablero eléctrico.</em></h2>
         <ol class="pasos" data-revelar>
           <li><h3>Revisamos la instalación</h3><p>Vemos el tablero, los circuitos y la puesta a tierra.</p></li>
           <li><h3>Te pasamos el presupuesto</h3><p>Materiales y mano de obra, antes de empezar.</p></li>
@@ -508,7 +507,7 @@
     <section class="seccion grano" id="preguntas">
       <div class="envoltura preguntas">
         <div data-revelar>
-          <h2>Preguntas <em>frecuentes.</em></h2>
+          <h2>Preguntas frecuentes sobre <em>tableros eléctricos.</em></h2>
         </div>
         <div class="faq" data-revelar>
           <details open><summary>¿Qué es la puesta a tierra y por qué importa?</summary><p>Es la conexión de la instalación a una jabalina enterrada. Sin ella, el disyuntor no puede proteger bien ante una fuga.</p></details>
@@ -520,7 +519,7 @@
 
     <section class="seccion grano mientras">
       <div class="envoltura">
-        <h2 data-revelar>Otros <em>problemas.</em></h2>
+        <h2 data-revelar>Otros servicios de electricista <em>en Mar del Plata.</em></h2>
         <ul class="otros" data-revelar>
           <li><a href="/sin-luz"><strong>Sin luz en casa</strong><span>Ver más<svg class="ico ico-trazo"><use href="#i-flecha"/></svg></span></a></li>
           <li><a href="/salta-la-termica"><strong>Salta la térmica</strong><span>Ver más<svg class="ico ico-trazo"><use href="#i-flecha"/></svg></span></a></li>
@@ -532,6 +531,7 @@
 
     <section class="cierre">
       <div class="envoltura" data-revelar>
+        <h2 class="cierre__titulo">¿Necesitás un electricista <em>ahora?</em></h2>
         <a class="cierre__tel" href="tel:+5492235013375" data-seccion="tableros-electricos-cierre" aria-label="Llamar al 223 501-3375">223 501-3375</a>
         <div class="cierre__pie">
           <p>Electricista urgente en Mar del Plata, las 24 horas. Escribinos y vamos.</p>

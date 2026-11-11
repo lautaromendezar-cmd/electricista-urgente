@@ -36,6 +36,12 @@ Fuera: punto de «atendemos ahora», checks de la portada, cinta con puntos, ró
 - La home enlaza desde Servicios (4 títulos con flecha) y desde el pie.
 - Ads: cada grupo apunta a su página (`herramientas/ads_paginas_10nov.py`).
 
+## SEO on-page (11/11, comparado con la competencia)
+
+- Competencia en «electricista mar del plata»: **electricistaenmardelplata.com.ar** (dominio exacto, 10 páginas: 3 de servicio + 6 de barrio, H2 con la búsqueda, matriculado/factura/garantía/reseñas; teléfono 341 = probable generador de leads) y **electricistaleo.com.ar** (1 página floja, rankea por ficha).
+- Regla aplicada: **H1 = solo la búsqueda** (la frase creativa grande es un <p>), **H2 con la búsqueda adentro** (en Mar del Plata, a domicilio, electricista de urgencia) y el remate en ámbar. H2 a 34-64 px. Title de la home: «Electricista en Mar del Plata a Domicilio · Urgencias 24 hs». Schema con catálogo de las 4 páginas.
+- Para más adelante: páginas por barrio (si Search Console muestra búsquedas por barrio) y página de trámites EDEA/medidor retirado **solo si Dario es matriculado**.
+
 ## Google Ads — cuenta «Electricista Urgente» 586-442-4444
 
 - Accesible con las credenciales del MCP (`~/.google-ads-mcp/`), facturación aprobada, ARS, autoetiquetado activo.
