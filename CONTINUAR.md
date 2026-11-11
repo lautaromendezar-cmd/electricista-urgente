@@ -19,6 +19,14 @@ Landing de electricista de urgencia en **Mar del Plata** para Dario.
 - Google (generar-google) no anduvo: el proyecto pasó el tope bruto de USD 5 de noviembre. No se tocó el tope.
 - Los assets de `img/` y `fuentes/` tienen caché `immutable`: **si cambia una imagen, cambiarle el nombre.**
 
+## Servicios = los de Manos Expertas (11/11, decisión de Lautaro)
+
+- La versión de la oficina había **inventado** servicios (nadie sabe de dónde): pilar de luz / EDEA, puesta a tierra con jabalina, líneas para aires, recableado, cambio y armado de tableros, fusibles, comercios. **La regla: los servicios son los de Manos Expertas**, que es la web de electricista de Dario.
+- Manos Expertas ofrece: urgencias (corte de luz, salta la térmica o el disyuntor, olor a quemado en enchufes, cortocircuitos, fases caídas) + Instalaciones, Tableros (revisión y reparación de tableros, térmicas y disyuntores), Iluminación y Mantenimiento. Y aclara que lo suyo es **«de la caja del medidor para adentro»**: lo de afuera es de la distribuidora (acá EDEA).
+- Hecho: `/pilar-de-luz` borrada, con redirección 301 a la home en `vercel.json`; `/tableros-electricos` pasó a revisión y reparación; home con «Media casa sin luz» (fase caída) y la lista de servicios de Manos Expertas; foto nueva `luz-noche` (iluminación, Higgsfield) en el collage.
+- Ads (`herramientas/ads_servicios_11nov.py`): grupo «Pilar de luz» borrado, Tableros sin claves de puesta a tierra ni cambio de tablero, RSA rehechos sin pilares, puesta a tierra ni comercios, sitelink del pilar → «Zonas de trabajo», fragmento con los servicios de Manos Expertas.
+- **Nada de esto lo confirmó Dario.** Sigue pendiente que confirme 24 hs, zonas (Batán, Sierra, Santa Clara), visita y medios de pago.
+
 ## Rediseño 11/11 (referencia «Voltify» que pasó Lautaro)
 
 - Secciones alternadas: oscuras (portada, «qué hacer mientras llega», servicios, preguntas) y **claras** (clase `.claro`: fondo `--papel` #f4efe6, texto tinta, acento de texto `--acento: #9a5400` porque el ámbar no se lee sobre claro).
@@ -39,7 +47,7 @@ Fuera: punto de «atendemos ahora», checks de la portada, cinta con puntos, ró
 
 ## Páginas de servicio (10/11)
 
-- `/sin-luz`, `/salta-la-termica`, `/pilar-de-luz`, `/tableros-electricos`. **Se generan con `node herramientas/generar-paginas.mjs`** a partir de `index.html` (toma head/estilos, cabecera, pie y scripts): **después de tocar el diseño de la home, volver a correrlo.** Los textos de cada página están en ese archivo. También regenera el `sitemap.xml`.
+- `/sin-luz`, `/salta-la-termica`, `/tableros-electricos` (`/pilar-de-luz` se borró el 11/11). **Se generan con `node herramientas/generar-paginas.mjs`** a partir de `index.html` (toma head/estilos, cabecera, pie y scripts): **después de tocar el diseño de la home, volver a correrlo.** Los textos de cada página están en ese archivo. También regenera el `sitemap.xml`.
 - Cada una: portada con foto propia, causas (con WhatsApp armado por causa), consejos, pasos, preguntas, «Otros problemas» y cierre. Schema Service + FAQPage + BreadcrumbList.
 - La home enlaza desde Servicios (4 títulos con flecha) y desde el pie.
 - Ads: cada grupo apunta a su página (`herramientas/ads_paginas_10nov.py`).
