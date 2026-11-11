@@ -79,6 +79,11 @@ Fuera: punto de «atendemos ahora», checks de la portada, cinta con puntos, ró
   - 10/11 (`herramientas/ads_ajustes_10nov.py`): fuera el destacado de Mercado Pago y RSA rehechos sin medios de pago. **Revisar ~13-nov: aprobación, términos de búsqueda, clics no válidos.**
 - Cuando arranque: medir CPA; si conviene, pasar a Maximizar conversiones con ~15-20 conversiones acumuladas.
 
+## Estado de la campaña (11/11 12:30)
+
+- Dario cargó $50.000 el 10/11 (cuenta prepaga). Al 11/11: 0 impresiones; campaña SUSPENDED (saldo sin acreditar) y los 4 RSA en revisión (rehechos el 11/11). Con $6.000/día el saldo dura ~8 días: avisar a Dario antes de que se termine.
+- **Revisar vie 13/11:** saldo acreditado, aprobación, impresiones/clics/CPC por grupo, términos de búsqueda (negativas), conversiones WhatsApp/llamar por página y botón (incluida la barra 24 hs, data-seccion aviso-24), clics no válidos.
+
 ## Pendiente
 
 1. **Antispam como La Perla:** registro de gclid/IP en Neon + vigilancia (`api/vigilar.js` de laperladestapaciones, en la PC de casa). Implica sumar `package.json` y una base Neon propia (no la de La Perla). Hacerlo si aparecen clics no válidos.
