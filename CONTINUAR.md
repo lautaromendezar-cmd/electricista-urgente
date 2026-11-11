@@ -19,6 +19,13 @@ Landing de electricista de urgencia en **Mar del Plata** para Dario.
 - Google (generar-google) no anduvo: el proyecto pasó el tope bruto de USD 5 de noviembre. No se tocó el tope.
 - Los assets de `img/` y `fuentes/` tienen caché `immutable`: **si cambia una imagen, cambiarle el nombre.**
 
+## Barra de 24 hs (11/11, pedido de Dario)
+
+- Barra ámbar fija arriba de todo (clase aviso24, alto en la variable aviso: 44 px; 40 px en celular). Toda la barra llama al teléfono y se mide como conversión con data-seccion aviso-24.
+- Muestra la hora real de Mar del Plata (Intl, zona America/Argentina/Buenos_Aires): «Son las 23:47 y estamos atendiendo». Sin JS no aparece el reloj y se ve el texto fijo.
+- Animación: la pastilla 24 hs se prende con parpadeo al cargar, los dos puntos del reloj marcan los segundos y cada 7 s cruza un brillo. Con reducir movimiento queda quieta.
+- Está antes de la cabecera, así que el generador la copia a las páginas de servicio.
+
 ## Servicios = los de Manos Expertas (11/11, decisión de Lautaro)
 
 - La versión de la oficina había **inventado** servicios (nadie sabe de dónde): pilar de luz / EDEA, puesta a tierra con jabalina, líneas para aires, recableado, cambio y armado de tableros, fusibles, comercios. **La regla: los servicios son los de Manos Expertas**, que es la web de electricista de Dario.

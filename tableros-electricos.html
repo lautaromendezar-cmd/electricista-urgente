@@ -64,12 +64,13 @@
       --ancho: 1320px;
       --margen: clamp(20px, 4vw, 56px);
       --cabecera: 76px;
+      --aviso: 44px;
       --curva: cubic-bezier(.22, 1, .36, 1);
     }
 
     *, *::before, *::after { box-sizing: border-box; }
     html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; background: var(--noche); }
-    [id] { scroll-margin-top: calc(var(--cabecera) + 8px); }
+    [id] { scroll-margin-top: calc(var(--aviso) + var(--cabecera) + 8px); }
     body {
       margin: 0;
       font-family: "Mona Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -122,7 +123,7 @@
 
     /* Cabecera */
     .cabecera {
-      position: fixed; inset: 0 0 auto 0; z-index: 50; height: var(--cabecera);
+      position: fixed; inset: var(--aviso) 0 auto 0; z-index: 50; height: var(--cabecera);
       display: flex; align-items: center;
       transition: background-color .35s var(--curva), box-shadow .35s var(--curva), height .35s var(--curva);
     }
@@ -159,7 +160,7 @@
       background: linear-gradient(90deg, rgba(10, 15, 26, .94) 0%, rgba(10, 15, 26, .72) 34%, rgba(10, 15, 26, .08) 68%),
                   linear-gradient(0deg, rgba(10, 15, 26, .85) 0%, rgba(10, 15, 26, 0) 36%);
     }
-    .portada__texto { position: relative; z-index: 2; width: 100%; max-width: var(--ancho); margin: 0 auto; padding: calc(var(--cabecera) + 56px) var(--margen) clamp(56px, 9vh, 104px); }
+    .portada__texto { position: relative; z-index: 2; width: 100%; max-width: var(--ancho); margin: 0 auto; padding: calc(var(--aviso) + var(--cabecera) + 56px) var(--margen) clamp(56px, 9vh, 104px); }
     .portada__texto > * { max-width: 760px; }
     .portada--mitad { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: stretch; }
     .portada--mitad .portada__foto { position: relative; inset: auto; z-index: auto; grid-column: 2; grid-row: 1; }
@@ -170,7 +171,7 @@
     .portada--mitad .portada__haz { background: radial-gradient(circle at var(--hx, 52%) var(--hy, 58%), rgba(10, 15, 26, 0) 0, rgba(10, 15, 26, 0) 140px, rgba(10, 15, 26, .62) 420px, rgba(10, 15, 26, .86) 780px); }
     .portada--mitad .portada__texto {
       grid-column: 1; grid-row: 1; max-width: none; display: flex; flex-direction: column; justify-content: flex-end;
-      padding: calc(var(--cabecera) + 56px) 0 clamp(48px, 7vh, 88px) max(var(--margen), calc((100vw - var(--ancho)) / 2 + var(--margen)));
+      padding: calc(var(--aviso) + var(--cabecera) + 56px) 0 clamp(48px, 7vh, 88px) max(var(--margen), calc((100vw - var(--ancho)) / 2 + var(--margen)));
       margin: 0 -14vw 0 0;
     }
     .portada h1 { margin: 0; }
@@ -343,6 +344,29 @@
     .miga a { color: var(--tenue); text-underline-offset: 3px; }
     .miga a:hover { color: var(--acento); }
 
+    /* Barra fija de 24 hs: toda es un botón de llamada; el reloj muestra la hora de Mar del Plata */
+    .aviso24 {
+      position: fixed; inset: 0 0 auto 0; z-index: 70; height: var(--aviso); overflow: hidden; isolation: isolate;
+      display: flex; align-items: center; justify-content: center; gap: 18px; padding: 0 var(--margen);
+      background: var(--sodio); color: var(--noche); text-decoration: none; font-size: 15px; font-weight: 600; letter-spacing: -0.005em; white-space: nowrap;
+    }
+    .aviso24::after {
+      content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+      background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, .55) 50%, transparent 70%);
+      transform: translateX(-100%); animation: brillo 7s var(--curva) 2s infinite;
+    }
+    .aviso24__24 { display: inline-flex; align-items: center; height: 28px; padding: 0 12px; border-radius: 999px; background: var(--noche); color: var(--sodio); font-weight: 800; letter-spacing: -0.01em; animation: prender 1.4s steps(1, end) .3s both; }
+    .aviso24__hora { display: none; }
+    .js .aviso24__hora { display: inline; }
+    .aviso24__hora b { font-weight: 800; font-variant-numeric: tabular-nums; }
+    .aviso24__dos { animation: segundo 1s steps(1, end) infinite; }
+    .aviso24__llamar { display: inline-flex; align-items: center; gap: 6px; font-weight: 750; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 2px; }
+    .aviso24__llamar .ico { width: 16px; height: 16px; }
+    .aviso24:hover .aviso24__llamar { text-decoration-color: transparent; }
+    .js .aviso24__fijo-largo { display: none; }
+    @keyframes brillo { 0% { transform: translateX(-100%); } 22%, 100% { transform: translateX(100%); } }
+    @keyframes segundo { 0% { opacity: 1; } 50% { opacity: .25; } }
+
     /* Barra fija en el celular */
     .barra-movil { display: none; }
 
@@ -369,14 +393,16 @@
       .tarjetas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 860px) {
-      :root { --cabecera: 64px; }
+      :root { --cabecera: 64px; --aviso: 40px; }
+      .aviso24 { gap: 10px; font-size: 14px; }
+      .aviso24__fijo, .aviso24__llamar { display: none; }
       body { font-size: 16px; padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
       .nav__enlace { display: none; }
       .marca__logo { height: 40px; }
       .cabecera__tel span { display: none; }
       .cabecera__tel { width: 44px; padding: 0; justify-content: center; }
       .portada, .portada.portada--mitad { display: grid; grid-template-columns: 1fr; grid-template-rows: auto auto; min-height: 0; align-items: start; }
-      .portada .portada__foto { position: relative; inset: auto; z-index: auto; grid-column: 1; grid-row: 1; height: 58svh; min-height: 380px; max-height: 560px; }
+      .portada .portada__foto { position: relative; inset: auto; z-index: auto; grid-column: 1; grid-row: 1; height: 58svh; min-height: 380px; max-height: 560px; margin-top: var(--aviso); }
       .portada__foto img { object-position: 50% 30%; }
       .portada .portada__foto::after { background: linear-gradient(0deg, var(--noche) 0%, rgba(10, 15, 26, .4) 38%, rgba(10, 15, 26, 0) 65%), linear-gradient(180deg, rgba(10, 15, 26, .7) 0%, rgba(10, 15, 26, 0) 25%); }
       .portada .portada__haz { background: radial-gradient(circle at 50% 48%, rgba(10, 15, 26, 0) 0, rgba(10, 15, 26, 0) 90px, rgba(10, 15, 26, .55) 300px); }
@@ -431,6 +457,13 @@
     <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
     <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
   </svg>
+
+  <a class="aviso24" href="tel:+5492235013375" data-seccion="aviso-24" aria-label="Atendemos las 24 horas, todos los días. Llamar al 223 501-3375">
+    <span class="aviso24__24">24 hs</span>
+    <span class="aviso24__fijo">Atendemos todos los días, también feriados<span class="aviso24__fijo-largo">: llamá cuando lo necesites</span></span>
+    <span class="aviso24__hora" aria-hidden="true">Son las <b data-hora><span data-h>--</span><span class="aviso24__dos">:</span><span data-m>--</span></b> y estamos atendiendo</span>
+    <span class="aviso24__llamar">Llamar ahora<svg class="ico ico-trazo"><use href="#i-flecha"/></svg></span>
+  </a>
 
   <header class="cabecera" data-cabecera>
     <div class="envoltura">
@@ -609,6 +642,18 @@
         var cabecera = document.querySelector('[data-cabecera]');
         var barra = document.querySelector('.barra-movil');
         var portada = document.querySelector('[data-portada]');
+
+        // Barra de 24 hs: hora de Mar del Plata, actualizada cada 10 s
+        var hh = document.querySelector('[data-h]'), mm = document.querySelector('[data-m]');
+        if (hh && window.Intl) {
+          var formato = new Intl.DateTimeFormat('es-AR', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'America/Argentina/Buenos_Aires' });
+          var marcar = function () {
+            var partes = formato.formatToParts(new Date());
+            partes.forEach(function (p) { if (p.type === 'hour') hh.textContent = p.value; if (p.type === 'minute') mm.textContent = p.value; });
+          };
+          marcar();
+          setInterval(marcar, 10000);
+        }
 
         // Cabecera sólida al scrollear
         function segunScroll() { cabecera.classList.toggle('cabecera--solida', window.scrollY > 24); }
