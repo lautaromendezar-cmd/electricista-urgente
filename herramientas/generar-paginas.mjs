@@ -203,7 +203,7 @@ function principal(p) {
     : imagen(p.foto, '(max-width: 860px) 100vw, 50vw', ` fetchpriority="high" style="object-position:${FOTOS[p.foto].pos}"`);
   return `
   <main>
-    <section class="portada" id="inicio" data-portada>
+    <section class="portada portada--mitad" id="inicio" data-portada>
       <div class="portada__foto">
         ${fotoPortada}
         <div class="portada__haz" aria-hidden="true"></div>
@@ -226,7 +226,7 @@ ${p.grande.map(l => `          <span class="renglon"><span>${l}</span></span>`).
       </div>
     </section>
 
-    <section class="seccion grano" id="causas">
+    <section class="seccion grano claro" id="causas">
       <div class="envoltura">
         <div class="encabezado" data-revelar>
           <h2>${p.causasTitulo}</h2>
@@ -260,7 +260,7 @@ ${p.consejos.map(c => `            <li><span>${c}</span></li>`).join('\n')}
       </div>
     </section>
 
-    <section class="seccion grano">
+    <section class="seccion grano claro">
       <div class="envoltura">
         <h2 data-revelar>${p.pasosTitulo}</h2>
         <ol class="pasos" data-revelar>
@@ -280,7 +280,7 @@ ${p.faq.map(([q, a], i) => `          <details${i === 0 ? ' open' : ''}><summary
       </div>
     </section>
 
-    <section class="seccion grano mientras">
+    <section class="seccion grano claro">
       <div class="envoltura">
         <h2 data-revelar>Otros servicios de electricista <em>en Mar del Plata.</em></h2>
         <ul class="otros" data-revelar>
@@ -290,8 +290,10 @@ ${otros.map(o => `          <li><a href="/${o.slug}"><strong>${esc(o.corto)}</st
       </div>
     </section>
 
-    <section class="cierre">
+    <section class="cierre claro">
       <div class="envoltura" data-revelar>
+        <div class="cierre__tarjeta">
+        <div class="cierre__fondo" aria-hidden="true"><img src="/img/hero-1100.webp" alt="" width="1100" height="614" loading="lazy"></div>
         <h2 class="cierre__titulo">¿Necesitás un electricista <em>ahora?</em></h2>
         <a class="cierre__tel" href="tel:+${TEL}" data-seccion="${p.slug}-cierre" aria-label="Llamar al ${TEL_VER}">${TEL_VER}</a>
         <div class="cierre__pie">
@@ -301,6 +303,7 @@ ${otros.map(o => `          <li><a href="/${o.slug}"><strong>${esc(o.corto)}</st
               <svg class="ico ico-marca"><use href="#i-wa"/></svg>Escribir por WhatsApp
             </a>
           </div>
+        </div>
         </div>
       </div>
     </section>
