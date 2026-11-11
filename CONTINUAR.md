@@ -52,7 +52,7 @@ Fuera: punto de «atendemos ahora», checks de la portada, cinta con puntos, ró
 
 1. **Antispam como La Perla:** registro de gclid/IP en Neon + vigilancia (`api/vigilar.js` de laperladestapaciones, en la PC de casa). Implica sumar `package.json` y una base Neon propia (no la de La Perla). Hacerlo si aparecen clics no válidos.
 2. ~~Search Console~~ → **hecho el 10/11**: propiedad de dominio verificada por TXT en Vercel DNS (`vercel dns`), sitemap enviado. **Sin ficha de Google Business por decisión de Lautaro (10/11).**
-3. **Vercel Analytics:** activarlo en el panel del proyecto y recién ahí volver a poner el script `/_vercel/insights/script.js` (se sacó el 10/11 porque daba 404).
+3. ~~Vercel Analytics~~ → activado por Lautaro el 10/11 y script repuesto en todas las páginas.
 
 ## Textos a confirmar con Dario
 
