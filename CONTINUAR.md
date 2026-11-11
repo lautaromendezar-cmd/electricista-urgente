@@ -21,8 +21,9 @@ Landing de electricista de urgencia en **Mar del Plata** para Dario.
 
 ## Logo (10/11)
 
-- Símbolo: **una térmica levantada** (caja redondeada + pulsador ámbar arriba = «volvió la luz»). Nombre en Mona Sans 86 %/800 pasado a trazos, «URGENTE» en ámbar sobre oscuro.
-- Archivos para Dario en `marca/` (no se publica): SVG y PNG para fondo oscuro, claro y con fondo; `icono` cuadrado; `perfil-redes` con aire para el recorte circular de WhatsApp/IG. `favicon.svg` y `apple-touch-icon.png` en la raíz. El logo va inline en la cabecera.
+- **Elegido por Lautaro (opción B, tras rechazar la «térmica levantada»):** rayo ámbar dentro de un cable que da la vuelta y termina en un enchufe. Nombre en Mona Sans 86 %/800 pasado a trazos, «URGENTE» en ámbar; la versión completa suma «MAR DEL PLATA».
+- Referencias que pasó (Pinterest): rayo + enchufe/cable en trazo continuo, signo reconocible al toque. Descartadas: A (cable que dibuja el rayo, floja) y C (sol de MdP con rayo calado).
+- Archivos para Dario en `marca/` (no se publica): logo para fondo oscuro, claro y con fondo (SVG + PNG 2400), `icono` cuadrado, `perfil-redes-1080.png` (con aire para el recorte circular de WhatsApp/IG), `simbolo-*` y `logo-web.svg` (sin «MAR DEL PLATA», el que va inline en la cabecera). `favicon.svg` y `apple-touch-icon.png` en la raíz.
 
 ## Simplificación (10/11, pedido de Lautaro)
 
