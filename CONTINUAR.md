@@ -21,9 +21,9 @@ Landing de electricista de urgencia en **Mar del Plata** para Dario.
 
 ## Rediseño 11/11 (referencia «Voltify» que pasó Lautaro)
 
-- Secciones alternadas: oscuras (portada, «qué hacer mientras llega», servicios, preguntas) y **claras** (clase : fondo  #f4efe6, texto tinta, acento de texto  porque el ámbar no se lee sobre claro).
-- Home: portada con la foto **a sangre**; las páginas usan  (sus fotos son de 900 px y a sangre se verían borrosas).
-- Fotos con ; collage en «Cómo trabajamos» con tarjeta «24 hs»; servicios como **tarjetas con foto** que enlazan a las 4 páginas (+ los otros 6 en lista); cierre como tarjeta oscura con foto sobre fondo claro.
+- Secciones alternadas: oscuras (portada, «qué hacer mientras llega», servicios, preguntas) y **claras** (clase `.claro`: fondo `--papel` #f4efe6, texto tinta, acento de texto `--acento: #9a5400` porque el ámbar no se lee sobre claro).
+- Home: portada con la foto **a sangre**; las páginas usan `.portada--mitad` (sus fotos son de 900 px y a sangre se verían borrosas).
+- Fotos con `--radio: 22px`; collage en «Cómo trabajamos» con tarjeta «24 hs»; servicios como **tarjetas con foto** que enlazan a las 4 páginas (+ los otros 6 en lista); cierre como tarjeta oscura con foto sobre fondo claro.
 - Tipografía: Mona Sans al 100 % de ancho y peso 750 (antes 86 %).
 - Sin testimonios: no hay reseñas reales.
 
