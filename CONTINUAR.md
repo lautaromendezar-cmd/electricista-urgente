@@ -19,16 +19,25 @@ Landing de electricista de urgencia en **Mar del Plata** para Dario.
 - Google (generar-google) no anduvo: el proyecto pasó el tope bruto de USD 5 de noviembre. No se tocó el tope.
 - Los assets de `img/` y `fuentes/` tienen caché `immutable`: **si cambia una imagen, cambiarle el nombre.**
 
+## Logo (10/11)
+
+- Símbolo: **una térmica levantada** (caja redondeada + pulsador ámbar arriba = «volvió la luz»). Nombre en Mona Sans 86 %/800 pasado a trazos, «URGENTE» en ámbar sobre oscuro.
+- Archivos para Dario en `marca/` (no se publica): SVG y PNG para fondo oscuro, claro y con fondo; `icono` cuadrado; `perfil-redes` con aire para el recorte circular de WhatsApp/IG. `favicon.svg` y `apple-touch-icon.png` en la raíz. El logo va inline en la cabecera.
+
+## Simplificación (10/11, pedido de Lautaro)
+
+Fuera: punto de «atendemos ahora», checks de la portada, cinta con puntos, rótulos con guion, puntos de servicios, cifras y la pregunta de medios de pago. **No volver a meter puntitos decorativos ni listas de checks: le parecen «IA slop».**
+
 ## Google Ads — cuenta «Electricista Urgente» 586-442-4444
 
 - Accesible con las credenciales del MCP (`~/.google-ads-mcp/`), facturación aprobada, ARS, autoetiquetado activo.
 - Conversiones creadas por API el 10/11 (`herramientas/ads_conversiones.py`): «Clic WhatsApp web» y «Clic llamar web», tag `AW-18567711962`, ya cargadas en `js/medicion.js`. gtag.js se carga con la primera interacción o a los 3,5 s.
 - **Campaña «Electricista MdP - Búsqueda» (id 24459234427), creada por API el 10/11 EN PAUSA** (`herramientas/ads_campana.py`, idempotente: si existe no hace nada).
-  - Búsqueda de Google solamente (sin partners ni display). Maximizar clics con tope CPC $3.000. Presupuesto **$8.000/día propuesto, a confirmar** (lo paga Dario).
+  - **HABILITADA el 10/11 ~21 h** con presupuesto **$6.000/día** (OK de Lautaro). Búsqueda de Google solamente. Maximizar clics con tope CPC $3.000.
   - Ubicación por presencia: General Pueyrredón (MdP, Batán, Sierra) + Santa Clara del Mar. Español.
   - 2 grupos: «Electricista urgente» y «Sin luz y térmica», 12 claves c/u en frase + exacta. 35 negativas (edea, reclamo, programados, curso, trabajo, auto…). **No poner «sin luz» / «corte de luz» como negativas amplias** (en Manos Expertas bloqueaban clientes).
   - RSA de 15 títulos y 4 descripciones por grupo. Sin «matriculado» (falta confirmar). Llamada `+5492235013375`, 4 sitelinks a las anclas, 5 destacados y fragmento de Servicios.
-  - **Para activarla:** confirmar presupuesto → Ads → campaña → Habilitar. Revisar a los 2-3 días los términos de búsqueda.
+  - 10/11 (`herramientas/ads_ajustes_10nov.py`): fuera el destacado de Mercado Pago y RSA rehechos sin medios de pago. **Revisar ~13-nov: aprobación, términos de búsqueda, clics no válidos.**
 - Cuando arranque: medir CPA; si conviene, pasar a Maximizar conversiones con ~15-20 conversiones acumuladas.
 
 ## Pendiente
@@ -39,8 +48,10 @@ Landing de electricista de urgencia en **Mar del Plata** para Dario.
 
 ## Textos a confirmar con Dario
 
+Criterio tomado de Manos Expertas (10/11): **sin confirmar, no usar** (matriculado, años, garantía, reseñas, medios de pago). «24 hs» se mantiene, como en Manos Expertas.
+
 - ¿Atiende de verdad **24 hs, todos los días**? Está en portada, cabecera, cifras, FAQ y schema.
-- Medios de pago: efectivo, transferencia y Mercado Pago.
+- Medios de pago: sacados de la web y de los anuncios hasta que los confirme.
 - Zonas: 21 barrios en la lista (más «y alrededores»).
 - ¿Es **matriculado**? Si lo es, sumarlo (hoy no se menciona).
 - ¿Cobra la visita? En el FAQ dice «depende de la zona y del horario».

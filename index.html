@@ -9,6 +9,7 @@
   <meta name="theme-color" content="#0a0f1a">
   <meta name="color-scheme" content="dark">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_AR">
@@ -51,8 +52,7 @@
       { "@type": "Question", "name": "¿Atienden de noche, fines de semana y feriados?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Las urgencias eléctricas no esperan al lunes: atendemos las 24 horas, todos los días, en Mar del Plata y alrededores." } },
       { "@type": "Question", "name": "¿Cuánto cuesta la visita?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de la zona y del horario. Te lo decimos por WhatsApp antes de salir, y una vez en tu casa te pasamos el precio del trabajo antes de empezar. Sin sorpresas." } },
       { "@type": "Question", "name": "Salta la térmica o el disyuntor y no levanta, ¿qué hago?", "acceptedAnswer": { "@type": "Answer", "text": "Desenchufá todo y probá subirlo de nuevo. Si vuelve a saltar, hay una falla o una fuga a tierra: no lo fuerces ni lo puentees. Dejalo bajo y escribinos." } },
-      { "@type": "Question", "name": "Hay olor a quemado o un enchufe se puso negro, ¿es urgente?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Bajá la térmica general, no toques el enchufe ni lo uses, y llamanos. Es una de las causas más comunes de incendio en casas." } },
-      { "@type": "Question", "name": "¿Cómo se paga?", "acceptedAnswer": { "@type": "Answer", "text": "Efectivo, transferencia o Mercado Pago." } }
+      { "@type": "Question", "name": "Hay olor a quemado o un enchufe se puso negro, ¿es urgente?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Bajá la térmica general, no toques el enchufe ni lo uses, y llamanos. Es una de las causas más comunes de incendio en casas." } }
     ]
   }
   </script>
@@ -108,11 +108,6 @@
     em { font-style: normal; color: var(--sodio); }
     .envoltura { width: 100%; max-width: var(--ancho); margin: 0 auto; padding: 0 var(--margen); }
     .seccion { position: relative; padding: clamp(88px, 12vw, 168px) 0; }
-    .rotulo {
-      display: flex; align-items: center; gap: 12px; margin-bottom: 28px;
-      font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--tenue);
-    }
-    .rotulo::before { content: ""; width: 28px; height: 2px; background: var(--sodio); }
     .bajada { color: var(--tenue); font-size: clamp(17px, 1.4vw, 20px); max-width: 560px; margin-top: 28px; }
     .grano::after {
       content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0;
@@ -150,9 +145,7 @@
     .cabecera--solida { background: rgba(10, 15, 26, .78); box-shadow: 0 1px 0 var(--linea); -webkit-backdrop-filter: blur(14px) saturate(1.4); backdrop-filter: blur(14px) saturate(1.4); }
     .cabecera .envoltura { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
     .marca { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-    .marca__luz { position: relative; width: 10px; height: 10px; border-radius: 50%; background: var(--sodio); box-shadow: 0 0 14px 2px rgba(255, 181, 71, .7); flex: none; }
-    .marca__texto { font-stretch: 80%; font-weight: 800; font-size: 21px; letter-spacing: -0.01em; line-height: 1; text-transform: uppercase; }
-    .marca__texto small { display: block; margin-top: 4px; font-stretch: 100%; font-weight: 500; font-size: 11px; letter-spacing: .14em; color: var(--apagado); }
+    .marca__logo { display: block; height: 42px; width: auto; }
     .nav { display: flex; align-items: center; gap: 34px; font-size: 15px; font-weight: 500; }
     .nav__enlace { text-decoration: none; color: var(--tenue); transition: color .2s ease; }
     .nav__enlace:hover { color: var(--hueso); }
@@ -188,12 +181,6 @@
       padding: calc(var(--cabecera) + 56px) 0 clamp(48px, 7vh, 88px) max(var(--margen), calc((100vw - var(--ancho)) / 2 + var(--margen)));
       margin-right: -16vw;
     }
-    .estado {
-      display: inline-flex; align-self: flex-start; align-items: center; gap: 10px; margin-bottom: 36px;
-      font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--tenue);
-    }
-    .estado__punto { width: 8px; height: 8px; border-radius: 50%; background: var(--sodio); animation: latido 2.4s ease-out infinite; }
-    @keyframes latido { 0% { box-shadow: 0 0 0 0 rgba(255, 181, 71, .6); } 70%, 100% { box-shadow: 0 0 0 10px rgba(255, 181, 71, 0); } }
     .portada h1 { font-weight: inherit; }
     .portada__clave { display: block; font-size: clamp(16px, 1.35vw, 19px); font-weight: 600; color: var(--hueso); letter-spacing: -0.005em; margin-bottom: 22px; }
     .portada__grande { display: block; font-size: clamp(64px, 9.4vw, 158px); }
@@ -203,11 +190,8 @@
     .renglon:nth-child(2) > span { animation-delay: .14s; }
     .renglon:nth-child(3) > span { animation-delay: .23s; }
     .renglon em { position: relative; display: inline-block; animation: zumbido 1.6s steps(1, end) .9s both; }
-    .portada__bajada { max-width: 470px; margin-top: 32px; font-size: clamp(17px, 1.35vw, 19px); color: var(--tenue); animation: aparecer 1s var(--curva) .45s both; }
+    .portada__bajada { max-width: 560px; margin-top: 32px; font-size: clamp(17px, 1.35vw, 19px); color: var(--tenue); animation: aparecer 1s var(--curva) .45s both; }
     .portada__acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; animation: aparecer 1s var(--curva) .55s both; }
-    .garantias { display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 44px 0 0; padding: 0; list-style: none; font-size: 14px; color: var(--tenue); animation: aparecer 1s var(--curva) .7s both; }
-    .garantias li { display: flex; align-items: center; gap: 9px; }
-    .garantias .ico { width: 16px; height: 16px; color: var(--sodio); }
 
     @keyframes subir { from { transform: translateY(105%); } to { transform: none; } }
     @keyframes aparecer { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
@@ -215,17 +199,6 @@
     @keyframes prender { 0% { opacity: .08; } 18% { opacity: .5; } 24% { opacity: .1; } 34% { opacity: .75; } 40% { opacity: .3; } 52%, 100% { opacity: 1; } }
     @keyframes respirar { from { transform: scale(1.06); } to { transform: none; } }
     @keyframes zumbido { 0% { opacity: .35; } 12% { opacity: 1; } 18% { opacity: .5; } 26%, 100% { opacity: 1; } }
-
-    /* Cinta */
-    .cinta { border-block: 1px solid var(--linea); overflow: hidden; background: var(--noche-2); }
-    .cinta__pista { display: flex; width: max-content; animation: cinta 46s linear infinite; }
-    .cinta__grupo { display: flex; align-items: center; flex: none; }
-    .cinta__grupo span {
-      display: flex; align-items: center; gap: 30px; padding: 22px 15px; white-space: nowrap;
-      font-stretch: 86%; font-weight: 750; font-size: clamp(20px, 2vw, 28px); letter-spacing: -0.01em; text-transform: uppercase; color: var(--tenue);
-    }
-    .cinta__grupo span::after { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--sodio); box-shadow: 0 0 10px rgba(255, 181, 71, .8); }
-    @keyframes cinta { to { transform: translateX(-50%); } }
 
     /* Problemas: índice */
     .encabezado { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 32px 64px; align-items: end; }
@@ -276,10 +249,6 @@
     .pasos li::before { content: counter(paso); display: block; margin-bottom: 28px; font-stretch: 75%; font-weight: 400; font-size: clamp(72px, 8vw, 120px); line-height: .8; color: var(--sodio); }
     .pasos h3 { font-size: 21px; }
     .pasos p { margin-top: 10px; color: var(--tenue); font-size: 16px; }
-    .cifras { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: clamp(64px, 8vw, 112px); }
-    .cifras div { padding: 34px 36px 36px; background: var(--noche-3); border-radius: 6px; }
-    .cifras strong { display: block; font-stretch: 86%; font-weight: 800; font-size: clamp(40px, 4.4vw, 64px); line-height: 1; letter-spacing: -0.02em; }
-    .cifras span { display: block; margin-top: 10px; color: var(--tenue); font-size: 15px; }
 
     /* Servicios */
     .servicios { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: clamp(40px, 6vw, 112px); align-items: start; }
@@ -288,7 +257,6 @@
     .lista-servicios { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 48px; }
     .lista-servicios li { padding: 30px 0 32px; border-top: 1px solid var(--linea); }
     .lista-servicios h3 { font-size: 21px; }
-    .lista-servicios h3::before { content: ""; display: block; width: 8px; height: 8px; margin-bottom: 18px; border-radius: 50%; background: var(--sodio); box-shadow: 0 0 12px rgba(255, 181, 71, .7); }
     .lista-servicios p { margin-top: 10px; color: var(--tenue); font-size: 16px; }
 
     /* Zonas */
@@ -298,9 +266,7 @@
     .zonas__fondo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--noche-2) 0%, rgba(15, 22, 38, .6) 40%, rgba(15, 22, 38, .1) 100%), linear-gradient(0deg, var(--noche-2), rgba(15, 22, 38, 0) 40%); }
     .barrios { list-style: none; margin: clamp(48px, 6vw, 80px) 0 0; padding: 0; max-width: 1040px; display: flex; flex-wrap: wrap; gap: 4px 0; }
     .barrios li { font-stretch: 86%; font-weight: 700; font-size: clamp(26px, 3.4vw, 48px); line-height: 1.12; letter-spacing: -0.02em; color: var(--hueso); }
-    .barrios li:nth-child(3n+2) { color: var(--tenue); }
-    .barrios li:nth-child(3n) { color: var(--apagado); }
-    .barrios li:not(:last-child)::after { content: "·"; margin: 0 .32em; color: var(--sodio); }
+    .barrios li:not(:last-child)::after { content: ","; margin-right: .3em; color: var(--apagado); }
     .zonas__nota { margin-top: 48px; color: var(--tenue); }
     .zonas__nota a { color: var(--sodio); font-weight: 600; text-underline-offset: 4px; }
 
@@ -372,6 +338,7 @@
       :root { --cabecera: 64px; }
       body { font-size: 16px; padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
       .nav__enlace { display: none; }
+      .marca__logo { height: 36px; }
       .cabecera__tel span { display: none; }
       .cabecera__tel { width: 44px; padding: 0; justify-content: center; }
       .portada { grid-template-columns: 1fr; grid-template-rows: auto auto; min-height: 0; }
@@ -380,10 +347,8 @@
       .portada__foto::after { background: linear-gradient(0deg, var(--noche) 0%, rgba(10, 15, 26, .4) 38%, rgba(10, 15, 26, 0) 65%), linear-gradient(180deg, rgba(10, 15, 26, .7) 0%, rgba(10, 15, 26, 0) 25%); }
       .portada__haz { background: radial-gradient(circle at 50% 48%, rgba(10, 15, 26, 0) 0, rgba(10, 15, 26, 0) 90px, rgba(10, 15, 26, .55) 300px); }
       .portada__texto { grid-column: 1; grid-row: 2; margin: -96px 0 0; padding: 0 var(--margen) 56px; }
-      .estado { margin-bottom: 22px; }
       .portada__grande { font-size: clamp(56px, 17vw, 96px); }
       .portada__acciones .boton { flex: 1 1 100%; }
-      .garantias { margin-top: 32px; gap: 10px 22px; }
       .encabezado, .proceso__cabeza, .mientras__grilla, .servicios, .preguntas { grid-template-columns: 1fr; }
       .encabezado .bajada { justify-self: start; }
       .indice a { grid-template-columns: 40px minmax(0, 1fr); gap: 4px 16px; padding: 26px 0; }
@@ -395,8 +360,6 @@
       .mientras__foto { aspect-ratio: 4 / 3.4; }
       .pasos { grid-template-columns: 1fr; row-gap: 40px; }
       .pasos li::before { font-size: 72px; margin-bottom: 18px; }
-      .cifras { grid-template-columns: 1fr; }
-      .cifras div { padding: 26px 26px; }
       .servicios__lado { position: static; }
       .zonas__fondo { width: 100%; inset: auto 0 0 0; height: 60%; }
       .zonas__fondo img { opacity: .4; }
@@ -437,8 +400,7 @@
   <header class="cabecera" data-cabecera>
     <div class="envoltura">
       <a class="marca" href="/" aria-label="Electricista Urgente, inicio">
-        <span class="marca__luz" aria-hidden="true"></span>
-        <span class="marca__texto">Electricista Urgente<small>Mar del Plata · 24 hs</small></span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 273 64" class="marca__logo" aria-hidden="true" focusable="false"><g transform="translate(0 0)"><rect x="2.5" y="2.5" width="39" height="59" rx="11" fill="none" stroke="#efe9df" stroke-width="5"/><rect x="11" y="11" width="22" height="24" rx="4.5" fill="#ffb547"/></g><path transform="translate(62 27)" fill="#efe9df" d="M17.19 0L1.74 0L1.74-27.00L17.15-27.00L17.15-21.63L6.85-21.63L7.93-22.70L7.93-4.30L6.85-5.37L17.19-5.37L17.19 0ZM16.00-11.26L6.85-11.26L6.85-16.26L16.00-16.26L16.00-11.26ZM33.74 0L19.48 0L19.48-27.00L25.85-27.00L25.85-4.63L24.96-5.56L33.74-5.56L33.74 0ZM51.15 0L35.70 0L35.70-27.00L51.11-27.00L51.11-21.63L40.81-21.63L41.89-22.70L41.89-4.30L40.81-5.37L51.15-5.37L51.15 0ZM49.96-11.26L40.81-11.26L40.81-16.26L49.96-16.26L49.96-11.26ZM62.81 0.33L62.81 0.33Q60.22 0.33 58.28-0.57Q56.33-1.48 55.02-3.26Q53.70-5.04 53.06-7.61Q52.41-10.19 52.41-13.52L52.41-13.52Q52.41-16.85 53.07-19.41Q53.74-21.96 55.07-23.74Q56.41-25.52 58.39-26.44Q60.37-27.37 63.04-27.37L63.04-27.37Q65.96-27.37 68.11-26.28Q70.26-25.19 71.52-23.00Q72.78-20.81 73.04-17.48L73.04-17.48L66.96-17.48Q66.74-18.96 66.26-19.98Q65.78-21.00 64.98-21.50Q64.19-22.00 63.04-22.00L63.04-22.00Q61.59-22.00 60.65-21.07Q59.70-20.15 59.22-18.28Q58.74-16.41 58.74-13.52L58.74-13.52Q58.74-11.26 59.02-9.65Q59.30-8.04 59.83-7.02Q60.37-6.00 61.17-5.50Q61.96-5.00 63.04-5.00L63.04-5.00Q64.19-5.00 64.98-5.54Q65.78-6.07 66.28-7.13Q66.78-8.19 66.96-9.67L66.96-9.67L73.04-9.67Q72.85-6.30 71.54-4.07Q70.22-1.85 68.02-0.76Q65.81 0.33 62.81 0.33ZM85.41 0L79.15 0L79.15-22.11L85.41-22.11L85.41 0ZM90.96-21.56L73.78-21.56L73.78-27.00L90.96-27.00L90.96-21.56ZM99.15 0L92.93 0L92.93-27.00L103.15-27.00Q104.70-27.00 106.02-26.74Q107.33-26.48 108.39-25.91Q109.44-25.33 110.20-24.44Q110.96-23.56 111.35-22.28Q111.74-21.00 111.74-19.37L111.74-19.37Q111.74-16.78 110.61-15.11Q109.48-13.44 107.37-12.89L107.37-12.89L107.37-12.67Q108.85-12.44 109.69-11.72Q110.52-11.00 110.89-9.89Q111.26-8.78 111.26-7.30L111.26-7.30L111.26-2.93Q111.26-2.11 111.31-1.41Q111.37-0.70 111.59 0L111.59 0L105.37 0Q105.15-0.52 105.07-1.28Q105-2.04 105-2.74L105-2.74L105-6.44Q105-7.63 104.78-8.31Q104.56-9.00 104-9.31Q103.44-9.63 102.44-9.63L102.44-9.63L98.59-9.63L98.59-14.52L102.30-14.52Q104.07-14.52 104.76-15.52Q105.44-16.52 105.44-18.15L105.44-18.15Q105.44-19.15 105.24-19.81Q105.04-20.48 104.63-20.91Q104.22-21.33 103.63-21.54Q103.04-21.74 102.26-21.74L102.26-21.74L99.15-21.74L99.15 0ZM120.52 0L114.15 0L114.15-27.00L120.52-27.00L120.52 0ZM133.22 0.33L133.22 0.33Q130.63 0.33 128.69-0.57Q126.74-1.48 125.43-3.26Q124.11-5.04 123.46-7.61Q122.81-10.19 122.81-13.52L122.81-13.52Q122.81-16.85 123.48-19.41Q124.15-21.96 125.48-23.74Q126.81-25.52 128.80-26.44Q130.78-27.37 133.44-27.37L133.44-27.37Q136.37-27.37 138.52-26.28Q140.67-25.19 141.93-23.00Q143.19-20.81 143.44-17.48L143.44-17.48L137.37-17.48Q137.15-18.96 136.67-19.98Q136.19-21.00 135.39-21.50Q134.59-22.00 133.44-22.00L133.44-22.00Q132.00-22.00 131.06-21.07Q130.11-20.15 129.63-18.28Q129.15-16.41 129.15-13.52L129.15-13.52Q129.15-11.26 129.43-9.65Q129.70-8.04 130.24-7.02Q130.78-6.00 131.57-5.50Q132.37-5.00 133.44-5.00L133.44-5.00Q134.59-5.00 135.39-5.54Q136.19-6.07 136.69-7.13Q137.19-8.19 137.37-9.67L137.37-9.67L143.44-9.67Q143.26-6.30 141.94-4.07Q140.63-1.85 138.43-0.76Q136.22 0.33 133.22 0.33ZM151.93 0L145.56 0L145.56-27.00L151.93-27.00L151.93 0ZM163.30 0.37L163.30 0.37Q160.15 0.37 158.11-0.74Q156.07-1.85 155.09-3.87Q154.11-5.89 154.07-8.52L154.07-8.52L159.93-8.52Q159.93-7.07 160.30-6.15Q160.67-5.22 161.43-4.80Q162.19-4.37 163.33-4.37L163.33-4.37Q164.26-4.37 164.91-4.69Q165.56-5.00 165.87-5.63Q166.19-6.26 166.19-7.19L166.19-7.19Q166.19-8.00 165.94-8.59Q165.70-9.19 165.17-9.61Q164.63-10.04 163.72-10.43Q162.81-10.81 161.52-11.26L161.52-11.26Q159.96-11.74 158.67-12.43Q157.37-13.11 156.43-14.07Q155.48-15.04 154.96-16.37Q154.44-17.70 154.44-19.52L154.44-19.52Q154.44-22.07 155.54-23.81Q156.63-25.56 158.61-26.44Q160.59-27.33 163.26-27.33L163.26-27.33Q166-27.33 167.94-26.41Q169.89-25.48 170.96-23.65Q172.04-21.81 172.04-19.11L172.04-19.11L166.19-19.11Q166.19-20.44 165.81-21.22Q165.44-22.00 164.80-22.35Q164.15-22.70 163.33-22.70L163.33-22.70Q162.48-22.70 161.89-22.41Q161.30-22.11 161-21.52Q160.70-20.93 160.70-20.07L160.70-20.07Q160.70-19.04 161.13-18.39Q161.56-17.74 162.56-17.24Q163.56-16.74 165.30-16.19L165.30-16.19Q166.70-15.70 167.98-15.06Q169.26-14.41 170.28-13.46Q171.30-12.52 171.91-11.09Q172.52-9.67 172.52-7.63L172.52-7.63Q172.52-5.11 171.44-3.31Q170.37-1.52 168.33-0.57Q166.30 0.37 163.30 0.37ZM185 0L178.74 0L178.74-22.11L185-22.11L185 0ZM190.56-21.56L173.37-21.56L173.37-27.00L190.56-27.00L190.56-21.56ZM195.30 0L189.07 0L195.37-27.00L204.11-27.00L210.44 0L204.19 0L200.56-18.41L199.85-22.11L199.63-22.11L198.93-18.41L195.30 0ZM203.63-5.00L195.85-5.00L196.74-9.81L202.70-9.81L203.63-5.00Z"/><path transform="translate(62 64)" fill="#ffb547" d="M10.89 0.33L10.89 0.33Q7.78 0.33 5.69-0.83Q3.59-2.00 2.54-4.11Q1.48-6.22 1.48-9.04L1.48-9.04L1.48-27.00L7.63-27.00L7.63-9.00Q7.63-7.67 8.04-6.83Q8.44-6.00 9.17-5.63Q9.89-5.26 10.93-5.26L10.93-5.26Q12.07-5.26 12.80-5.69Q13.52-6.11 13.87-6.94Q14.22-7.78 14.22-9.00L14.22-9.00L14.22-27.00L20.37-27.00L20.37-9.04Q20.37-5.96 19.19-3.89Q18.00-1.81 15.89-0.74Q13.78 0.33 10.89 0.33ZM29.48 0L23.26 0L23.26-27.00L33.48-27.00Q35.04-27.00 36.35-26.74Q37.67-26.48 38.72-25.91Q39.78-25.33 40.54-24.44Q41.30-23.56 41.69-22.28Q42.07-21.00 42.07-19.37L42.07-19.37Q42.07-16.78 40.94-15.11Q39.81-13.44 37.70-12.89L37.70-12.89L37.70-12.67Q39.19-12.44 40.02-11.72Q40.85-11.00 41.22-9.89Q41.59-8.78 41.59-7.30L41.59-7.30L41.59-2.93Q41.59-2.11 41.65-1.41Q41.70-0.70 41.93 0L41.93 0L35.70 0Q35.48-0.52 35.41-1.28Q35.33-2.04 35.33-2.74L35.33-2.74L35.33-6.44Q35.33-7.63 35.11-8.31Q34.89-9.00 34.33-9.31Q33.78-9.63 32.78-9.63L32.78-9.63L28.93-9.63L28.93-14.52L32.63-14.52Q34.41-14.52 35.09-15.52Q35.78-16.52 35.78-18.15L35.78-18.15Q35.78-19.15 35.57-19.81Q35.37-20.48 34.96-20.91Q34.56-21.33 33.96-21.54Q33.37-21.74 32.59-21.74L32.59-21.74L29.48-21.74L29.48 0ZM53.26 0.37L53.26 0.37Q50.96 0.37 49.20-0.56Q47.44-1.48 46.24-3.26Q45.04-5.04 44.43-7.56Q43.81-10.07 43.81-13.30L43.81-13.30Q43.81-16.67 44.48-19.26Q45.15-21.85 46.52-23.67Q47.89-25.48 49.93-26.41Q51.96-27.33 54.70-27.33L54.70-27.33Q57.67-27.33 59.87-26.26Q62.07-25.19 63.37-23.04Q64.67-20.89 64.89-17.59L64.89-17.59L58.78-17.59Q58.59-19.04 58.06-20.02Q57.52-21.00 56.67-21.50Q55.81-22.00 54.70-22.00L54.70-22.00Q53.11-22.00 52.11-21.04Q51.11-20.07 50.61-18.17Q50.11-16.26 50.11-13.41L50.11-13.41Q50.11-11.30 50.41-9.70Q50.70-8.11 51.26-7.04Q51.81-5.96 52.65-5.43Q53.48-4.89 54.63-4.89L54.63-4.89Q55.96-4.89 56.93-5.50Q57.89-6.11 58.39-7.31Q58.89-8.52 58.89-10.33L58.89-10.33L58.89-11.70L60.22-10.30L54.41-10.30L54.41-14.89L65.07-14.89L65.07 0L60.63 0L60.37-3.78L60.15-3.78Q59.63-2.37 58.61-1.44Q57.59-0.52 56.24-0.07Q54.89 0.37 53.26 0.37ZM83.26 0L67.81 0L67.81-27.00L83.22-27.00L83.22-21.63L72.93-21.63L74.00-22.70L74.00-4.30L72.93-5.37L83.26-5.37L83.26 0ZM82.07-11.26L72.93-11.26L72.93-16.26L82.07-16.26L82.07-11.26ZM91.56 0L85.56 0L85.56-27.00L92.63-27.00L99.07-10.74L99.30-10.74L99.04-18.93L99.04-27.00L104.85-27.00L104.85 0L98.04 0L91.52-16.00L91.30-16.00L91.56-8.33L91.56 0ZM118.44 0L112.19 0L112.19-22.11L118.44-22.11L118.44 0ZM124-21.56L106.81-21.56L106.81-27.00L124-27.00L124-21.56ZM141.41 0L125.96 0L125.96-27.00L141.37-27.00L141.37-21.63L131.07-21.63L132.15-22.70L132.15-4.30L131.07-5.37L141.41-5.37L141.41 0ZM140.22-11.26L131.07-11.26L131.07-16.26L140.22-16.26L140.22-11.26Z"/></svg>
       </a>
       <nav class="nav" aria-label="Principal">
         <a class="nav__enlace" href="#urgencias">Urgencias</a>
@@ -463,16 +425,15 @@
         <div class="portada__haz" aria-hidden="true"></div>
       </div>
       <div class="portada__texto">
-        <p class="estado"><span class="estado__punto" aria-hidden="true"></span>Atendemos ahora · todos los días</p>
         <h1>
-          <span class="portada__clave">Electricista urgente en Mar del Plata, las 24 horas</span>
+          <span class="portada__clave">Electricista urgente en Mar del Plata</span>
           <span class="portada__grande display">
             <span class="renglon"><span>¿Te quedaste</span></span>
             <span class="renglon"><span>sin luz?</span></span>
             <span class="renglon"><span><em>Vamos.</em></span></span>
           </span>
         </h1>
-        <p class="portada__bajada">Se cortó la luz, salta la térmica o hay olor a quemado: mandanos un WhatsApp con una foto y te decimos cómo seguimos. Vamos a tu casa.</p>
+        <p class="portada__bajada">Mandanos un WhatsApp con una foto y vamos a tu casa.</p>
         <div class="portada__acciones">
           <a class="boton boton--wa" href="https://wa.me/5492235013375?text=Hola!%20Necesito%20un%20electricista%20urgente" data-seccion="hero">
             <svg class="ico ico-marca"><use href="#i-wa"/></svg>Escribir por WhatsApp
@@ -481,26 +442,13 @@
             <svg class="ico ico-trazo"><use href="#i-tel"/></svg>Llamar 223 501-3375
           </a>
         </div>
-        <ul class="garantias">
-          <li><svg class="ico ico-trazo"><use href="#i-check"/></svg>Precio antes de empezar</li>
-          <li><svg class="ico ico-trazo"><use href="#i-check"/></svg>Noches, findes y feriados</li>
-          <li><svg class="ico ico-trazo"><use href="#i-check"/></svg>Efectivo, transferencia o Mercado Pago</li>
-        </ul>
       </div>
     </section>
-
-    <div class="cinta" aria-hidden="true">
-      <div class="cinta__pista">
-        <div class="cinta__grupo"><span>Cortes de luz</span><span>Térmica que salta</span><span>Disyuntor</span><span>Olor a quemado</span><span>Tableros</span><span>Pilar y medidor</span><span>Puesta a tierra</span><span>24 horas</span></div>
-        <div class="cinta__grupo"><span>Cortes de luz</span><span>Térmica que salta</span><span>Disyuntor</span><span>Olor a quemado</span><span>Tableros</span><span>Pilar y medidor</span><span>Puesta a tierra</span><span>24 horas</span></div>
-      </div>
-    </div>
 
     <section class="seccion grano" id="urgencias">
       <div class="envoltura">
         <div class="encabezado" data-revelar>
           <div>
-            <p class="rotulo">¿Qué te está pasando?</p>
             <h2>Tocá tu problema. <em>Escribinos directo.</em></h2>
           </div>
           <p class="bajada">El mensaje ya sale armado. Si podés, sumale una foto del tablero o del enchufe: así llegamos con lo que hace falta.</p>
@@ -553,7 +501,6 @@
           <img src="/img/enchufe-noche-700.webp" srcset="/img/enchufe-noche-700.webp 700w, /img/enchufe-noche-900.webp 900w" sizes="(max-width: 860px) 100vw, 40vw" alt="Enchufe quemado con hollín en la pared, iluminado con una linterna" width="900" height="1125" loading="lazy">
         </div>
         <div data-revelar>
-          <p class="rotulo">Antes de que lleguemos</p>
           <h2 id="mientras-titulo">Mientras vamos <em>para allá.</em></h2>
           <ol class="consejos">
             <li><span>Si hay olor a quemado o chispas, <strong>bajá la térmica general.</strong></span></li>
@@ -572,7 +519,6 @@
       <div class="envoltura">
         <div class="proceso__cabeza">
           <div data-revelar>
-            <p class="rotulo">Cómo trabajamos</p>
             <h2>Sin vueltas. <em>Con el precio claro.</em></h2>
           </div>
           <div class="proceso__foto" data-revelar="foto">
@@ -585,20 +531,14 @@
           <li><h3>Revisamos y te pasamos el precio</h3><p>Encontramos la falla y te decimos cuánto cuesta arreglarla. Empezamos solo si estás de acuerdo.</p></li>
           <li><h3>Lo dejamos funcionando y seguro</h3><p>Probamos todo antes de irnos y te explicamos qué fue lo que falló.</p></li>
         </ol>
-        <div class="cifras" data-revelar>
-          <div><strong>24 hs</strong><span>todos los días, también feriados</span></div>
-          <div><strong>21 barrios</strong><span>de Mar del Plata y alrededores</span></div>
-          <div><strong>3 medios</strong><span>efectivo, transferencia y Mercado Pago</span></div>
-        </div>
       </div>
     </section>
 
     <section class="seccion grano" id="servicios">
       <div class="envoltura servicios">
         <div class="servicios__lado" data-revelar>
-          <p class="rotulo">Servicios de electricidad</p>
           <h2>Urgencias y trabajos eléctricos.</h2>
-          <p class="bajada">En casas, departamentos y comercios. ¿No ves lo que necesitás? Preguntanos igual.</p>
+          <p class="bajada">En casas, departamentos y comercios.</p>
           <a class="boton boton--wa" href="https://wa.me/5492235013375?text=Hola!%20Quiero%20consultar%20por%20un%20trabajo%20de%20electricidad" data-seccion="servicios">
             <svg class="ico ico-marca"><use href="#i-wa"/></svg>Consultar por WhatsApp
           </a>
@@ -624,7 +564,6 @@
       </div>
       <div class="envoltura">
         <div data-revelar>
-          <p class="rotulo">Zonas de trabajo</p>
           <h2>Vamos a todo<br><em>Mar del Plata.</em></h2>
           <p class="bajada">Del centro a los barrios, y también a Batán, Sierra de los Padres y la costa norte.</p>
         </div>
@@ -641,23 +580,19 @@
     <section class="seccion grano" id="preguntas">
       <div class="envoltura preguntas">
         <div data-revelar>
-          <p class="rotulo">Preguntas frecuentes</p>
           <h2>Lo que más nos preguntan.</h2>
-          <p class="bajada">¿Te queda una duda? Escribinos y te contestamos al toque.</p>
         </div>
         <div class="faq" data-revelar>
           <details open><summary>¿Atienden de noche, fines de semana y feriados?</summary><p>Sí. Las urgencias eléctricas no esperan al lunes: atendemos las 24 horas, todos los días, en Mar del Plata y alrededores.</p></details>
           <details><summary>¿Cuánto cuesta la visita?</summary><p>Depende de la zona y del horario. Te lo decimos por WhatsApp antes de salir, y una vez en tu casa te pasamos el precio del trabajo antes de empezar. Sin sorpresas.</p></details>
           <details><summary>Salta la térmica o el disyuntor y no levanta, ¿qué hago?</summary><p>Desenchufá todo y probá subirlo de nuevo. Si vuelve a saltar, hay una falla o una fuga a tierra: no lo fuerces ni lo puentees. Dejalo bajo y escribinos.</p></details>
           <details><summary>Hay olor a quemado o un enchufe se puso negro, ¿es urgente?</summary><p>Sí. Bajá la térmica general, no toques el enchufe ni lo uses, y llamanos. Es una de las causas más comunes de incendio en casas.</p></details>
-          <details><summary>¿Cómo se paga?</summary><p>Efectivo, transferencia o Mercado Pago.</p></details>
         </div>
       </div>
     </section>
 
     <section class="cierre">
       <div class="envoltura" data-revelar>
-        <p class="rotulo">¿Problema eléctrico ahora?</p>
         <a class="cierre__tel" href="tel:+5492235013375" data-seccion="cierre" aria-label="Llamar al 223 501-3375">223 501-3375</a>
         <div class="cierre__pie">
           <p>Electricista urgente en Mar del Plata, las 24 horas. Escribinos y vamos.</p>
