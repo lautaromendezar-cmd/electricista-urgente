@@ -92,7 +92,10 @@ Fuera: punto de «atendemos ahora», checks de la portada, cinta con puntos, ró
 - Término malo: «zonas sin luz hoy mar del plata» (buscan cortes de EDEA). Negativas en FRASE agregadas (`herramientas/ads_negativas_13nov.py`): zonas sin luz, barrios sin luz, corte de luz hoy, cortes de luz hoy. «Hoy» suelta NO («electricista hoy» sirve).
 - Claves con «pocas búsquedas» (no salen, no es problema): tablero electrico mar del plata, arreglar tablero electrico, electricista urgente mar del plata, salta la termica y no levanta, disyuntor no levanta, se corta la luz y salta la termica.
 - **Saldo: a este ritmo quedan ~4-5 días (no 8). Avisarle a Dario ~mar 17/11.**
-- Próxima revisión: términos de búsqueda con clics, CPC de «electricista cerca», conversiones por botón; evaluar sumar conversión de llamadas desde el anuncio.
+- Tarde del 13/11: Google devolvió otro clic no válido → 4 clics, $5.632, saldo ~$35.700 (~6 días: **avisar a Dario ~mié 18/11**). Término malo nuevo: «tablero de embutir 36 modulos» (1 impr.); si se repite, negativas «embutir» / «modulos».
+- **Llamadas desde el anuncio: YA se miden** con la acción automática de Google «Llamadas desde anuncios» (conversionActions/179, ≥ 60 s, en los objetivos de la campaña y ofertable). La API NO deja crear otra AD_CALL (error «not in this version»): no reintentar. Ver llamadas en `call_view`.
+- Las 2 llamadas del 13/11 (8:46 y 8:47) fueron PERDIDAS (0 s); Dario confirmó que le sonó y no llegó a atender. Le pedimos que devuelva al toque y que diga si hay horarios en que no atiende (para programar la campaña).
+- Próxima revisión: términos con clics, CPC de «electricista cerca», conversiones por botón y llamadas atendidas.
 
 ## Pendiente
 
