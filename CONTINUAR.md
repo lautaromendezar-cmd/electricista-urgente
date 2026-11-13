@@ -84,6 +84,16 @@ Fuera: punto de «atendemos ahora», checks de la portada, cinta con puntos, ró
 - Dario cargó $50.000 el 10/11 (cuenta prepaga). Al 11/11: 0 impresiones; campaña SUSPENDED (saldo sin acreditar) y los 4 RSA en revisión (rehechos el 11/11). Con $6.000/día el saldo dura ~8 días: avisar a Dario antes de que se termine.
 - **Revisar vie 13/11:** saldo acreditado, aprobación, impresiones/clics/CPC por grupo, términos de búsqueda (negativas), conversiones WhatsApp/llamar por página y botón (incluida la barra 24 hs, data-seccion aviso-24), clics no válidos.
 
+## Arranque real (13/11, revisión ~9:30)
+
+- Saldo acreditado ($41.322 sin IVA = los $50.000), presupuesto de cuenta APPROVED; consumido ~$11.700. Campaña SERVING (aprendizaje), los 4 grupos con anuncios aprobados.
+- 12/11: 2 impresiones. 13/11 hasta las 9 h: 17 impr., 5 clics, **$7.643** (pasa los $6.000/día; Google puede gastar hasta 2x en un día), **CPC ~$1.530**, 2 clics no válidos (no se cobran), 0 conversiones todavía. Todos los clics desde Mar del Plata.
+- Casi todo el gasto vino de «electricista cerca» (Electricista urgente). 1 clic de llamada desde el anuncio («me quede sin luz»): las llamadas desde el anuncio **no se miden** como conversión (solo los clics de la web).
+- Término malo: «zonas sin luz hoy mar del plata» (buscan cortes de EDEA). Negativas en FRASE agregadas (`herramientas/ads_negativas_13nov.py`): zonas sin luz, barrios sin luz, corte de luz hoy, cortes de luz hoy. «Hoy» suelta NO («electricista hoy» sirve).
+- Claves con «pocas búsquedas» (no salen, no es problema): tablero electrico mar del plata, arreglar tablero electrico, electricista urgente mar del plata, salta la termica y no levanta, disyuntor no levanta, se corta la luz y salta la termica.
+- **Saldo: a este ritmo quedan ~4-5 días (no 8). Avisarle a Dario ~mar 17/11.**
+- Próxima revisión: términos de búsqueda con clics, CPC de «electricista cerca», conversiones por botón; evaluar sumar conversión de llamadas desde el anuncio.
+
 ## Pendiente
 
 1. **Antispam como La Perla:** registro de gclid/IP en Neon + vigilancia (`api/vigilar.js` de laperladestapaciones, en la PC de casa). Implica sumar `package.json` y una base Neon propia (no la de La Perla). Hacerlo si aparecen clics no válidos.
